@@ -1,0 +1,124 @@
+/*
+Theme Name: Kvarteret
+Theme URI: http://kvarteret.no/
+Description: Kvarterets standard theme
+Author: Web-gruppen
+Version: .1
+Tags: kvarteret, pingvin, rød
+*/
+
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+body {
+	line-height: 1;
+}
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-weight: normal;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote {
+	quotes: none;
+}
+blockquote:before, blockquote:after {
+	content: '';
+	content: none;
+}
+del {
+	text-decoration: line-through;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a img {
+	border: none;
+}
+
+html {
+  background-color: #929292;
+  height: 100%;
+}
+
+body {
+  width: 1000px;
+  margin: 0 auto;
+  font-family: Tahoma, sans-serif;
+}
+
+div#header {
+  background-color: #fff;
+  padding-top: 40px;
+  margin-left: 17px;
+  margin-right: 17px;
+  padding-left: 20px;
+}
+
+#navigation_bar {
+  background-color: #fff;
+}
+
+span#navigation_sides {
+  height: 17px;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+span#navigation_sides img#fancy_right {
+  float: right;
+}
+
+span#navigation_sides img#fancy_left {
+  float: left;
+}
+
+div#main {
+  background-color: #fff;
+  margin-left: 17px;
+  margin-right: 17px;
+  padding: 20px;
+}
+
+div.menu ul {
+  background-color: #E5190F;
+  height: 35px;
+  padding-left: 30px;
+}
+
+div.menu ul li {
+  display: inline;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 35px;
+}
+
+div.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.05em;
+}
+
+div.menu ul li a:hover {
+  color: #eee;
+}
