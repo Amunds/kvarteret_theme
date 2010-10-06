@@ -46,6 +46,16 @@ blockquote:before, blockquote:after {
 del {
 	text-decoration: line-through;
 }
+
+h1.entry-title {
+  font-size: 1.3em;
+  margin: 0;
+  padding-bottom: 20px;
+  color: #E5190F;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
 /* tables still need 'cellspacing="0"' in the markup */
 table {
 	border-collapse: collapse;
@@ -64,22 +74,27 @@ body {
   width: 1000px;
   margin: 0 auto;
   font-family: Tahoma, sans-serif;
+  margin-top: 20px;
 }
 
 div#header {
   background-color: #fff;
   padding-top: 40px;
-  margin-left: 17px;
-  margin-right: 17px;
+  margin-left: 12px;
+  margin-right: 12px;
   padding-left: 20px;
+  -moz-border-radius-topleft: 15px;
+  -moz-border-radius-topright: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 #navigation_bar {
-  background-color: #fff;
+  background-color: none;
 }
 
 span#navigation_sides {
-  height: 17px;
+  height: 12px;
   width: 100%;
   display: block;
   overflow: hidden;
@@ -93,32 +108,55 @@ span#navigation_sides img#fancy_left {
   float: left;
 }
 
+span#white_navigation_background {
+  width: 976px;
+  background-color: #fff;
+  display: block;
+  float: left;
+  height: 12px;
+}
+
 div#main {
   background-color: #fff;
-  margin-left: 17px;
-  margin-right: 17px;
+  margin-left: 12px;
+  margin-right: 12px;
   padding: 20px;
 }
 
-div.menu ul {
+div.menu-header ul {
   background-color: #E5190F;
-  height: 35px;
+  background-image: url('images/navigation_background.png');
+  background-repeat: repeat-x;
+  height: 40px;
   padding-left: 30px;
 }
 
-div.menu ul li {
+div.menu-header ul li {
   display: inline;
   padding-left: 10px;
   padding-right: 10px;
-  line-height: 35px;
+  line-height: 40px;
+  height: 40px;
 }
 
-div.menu ul li a {
+div.menu-header ul li.current_page_item {
+  background-image: url('images/current_menu_item.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding-bottom: 11px;
+}
+
+div.menu-header ul li a {
   color: #fff;
   text-decoration: none;
   font-size: 1.05em;
+  padding-top: 9px;
+  padding-bottom: 10px;
 }
 
-div.menu ul li a:hover {
+div.menu-header ul li a:hover {
   color: #eee;
+  background-image: url('images/current_menu_item.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }

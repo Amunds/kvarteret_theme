@@ -58,6 +58,7 @@
 		<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
 		<span id="navigation_sides">
 	    <img src="<?php bloginfo('template_directory'); ?>/images/navigation_left.png" id="fancy_left">
+	    <span id="white_navigation_background"></span>
       <img src="<?php bloginfo('template_directory'); ?>/images/navigation_right.png" id="fancy_right">
     </span>
 	</div>
