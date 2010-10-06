@@ -155,8 +155,41 @@ div.menu-header ul li a {
 }
 
 div.menu-header ul li a:hover {
-  color: #eee;
   background-image: url('images/current_menu_item.png');
   background-repeat: no-repeat;
   background-position: center bottom;
+}
+
+div#left_content {
+  width: 600px;
+  overflow: hidden;
+}
+
+div.current_news {
+  width: 290px;
+  float: left;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+
+a.current_news_title {
+  color: #E5190F;
+  text-decoration: none;
+}
+
+div.current_news_image img {
+  width: 290px;
+  height: 100px;
+  padding-bottom: 5px;
+}
+
+a:hover.current_news_title {
+  color: #E5190F;
+  text-decoration: underline;
+}
+
+span.excerpt p {
+  padding-top: 5px;
+  font-size: 0.8em;
+  line-height: 1.1em;
 }
