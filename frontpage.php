@@ -14,12 +14,11 @@ get_header(); ?>
 <?php
 // Add custom excerpt length
 function custom_excerpt_length($length) {
-	return 11;
+	return 20;
 }
 add_filter('excerpt_length', 'custom_excerpt_length');
 ?>
 
-<div id="container">
   <div id="content" role="main">
     <div id="left_content">
       <?php
@@ -32,7 +31,7 @@ add_filter('excerpt_length', 'custom_excerpt_length');
         <div class="current_news_image">
           <?php
           if ( has_post_thumbnail() ) {
-          	the_post_thumbnail();
+          	the_post_thumbnail( 'current-news-thumbnail' );
           } else {
           ?>
             <img src="<?php bloginfo('template_directory'); ?>/images/current_news_image_missing.png">
@@ -48,7 +47,7 @@ add_filter('excerpt_length', 'custom_excerpt_length');
       </div>
         <?php endforeach; ?>
     </div>
+      <?php get_sidebar(); ?>
   </div><!-- #content -->
-</div><!-- #container -->
 
 <?php get_footer(); ?>

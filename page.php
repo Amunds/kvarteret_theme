@@ -13,10 +13,8 @@
  */
 
 get_header(); ?>
-
-		<div id="container">
 			<div id="content" role="main">
-
+        <div id="left_content">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -29,16 +27,13 @@ get_header(); ?>
 					<div class="entry-content">
 						<?php the_content(); ?>
 						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentyten' ), 'after' => '</div>' ) ); ?>
-						<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
 					</div><!-- .entry-content -->
 				</div><!-- #post-## -->
 
-				<?php comments_template( '', true ); ?>
-
 <?php endwhile; ?>
+  </div>
 
-			</div><!-- #content -->
-		</div><!-- #container -->
 
 <?php get_sidebar(); ?>
+			</div><!-- #content -->
 <?php get_footer(); ?>

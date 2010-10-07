@@ -56,6 +56,16 @@ h1.entry-title {
   letter-spacing: 0.1em;
 }
 
+.give_me_room_above {
+  padding-top: 20px;
+}
+
+div.entry-content p {
+  font-size: 0.85em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 /* tables still need 'cellspacing="0"' in the markup */
 table {
 	border-collapse: collapse;
@@ -66,8 +76,10 @@ a img {
 }
 
 html {
-  background-color: #929292;
+  background-color: #868687;
   height: 100%;
+  background-image: url('images/body_background.png');
+  background-repeat: repeat-x;
 }
 
 body {
@@ -160,16 +172,21 @@ div.menu-header ul li a:hover {
   background-position: center bottom;
 }
 
+#content {
+  overflow: hidden;
+}
+
 div#left_content {
   width: 600px;
   overflow: hidden;
+  float: left;
 }
 
 div.current_news {
   width: 290px;
   float: left;
   padding-right: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 a.current_news_title {
@@ -184,7 +201,6 @@ div.current_news_image img {
 }
 
 a:hover.current_news_title {
-  color: #E5190F;
   text-decoration: underline;
 }
 
@@ -192,4 +208,69 @@ span.excerpt p {
   padding-top: 5px;
   font-size: 0.8em;
   line-height: 1.1em;
+  color: #444;
+}
+
+#footer {
+  height: 130px;
+  background-color: #fff;
+  margin-left: 12px;
+  margin-right: 12px;
+  padding: 20px;
+  padding-bottom: 10px;
+  -moz-border-radius-bottomleft: 15px;
+  -moz-border-radius-bottomright: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+#footer_content {
+  width: 100%;
+  height: 130px;
+  background-image: url('images/footer_background.png');
+  background-repeat: repeat-x;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#sub_footer {
+  font-size: 0.7em;
+  text-align: center;
+  padding: 40px;
+  padding-top: 10px;
+  color: #555;
+}
+
+#standard_right_menu {
+  width: 320px;
+  float: right;
+}
+
+#standard_right_menu li {
+  list-style-type: none;
+  color: #E5190F;
+  font-size: 0.9em;
+}
+
+div.opening_hours_container {
+  width: 270px;
+  float: left;
+  color: #fff;
+  padding: 20px;
+  padding-top: 10px;
+}
+
+div.opening_hours_container span.opening_title{
+  display: block;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  font-size: 1.1em;
+}
+
+div.opening_hours_container span.opening_hours {
+  font-size: 0.9em;
+}
+
+img.small_penguins {
+  float: right;
 }
