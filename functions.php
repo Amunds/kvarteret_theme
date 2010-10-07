@@ -115,6 +115,7 @@ function twentyten_setup() {
 	// Larger images will be auto-cropped to fit, smaller ones will be ignored. See header.php.
 	set_post_thumbnail_size( HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true );
   add_image_size( 'current-news-thumbnail', 290, 100 );
+  add_image_size( 'featured-thumbnail', 600, 200, true );
 
 	// Don't support text inside the header image.
 	define( 'NO_HEADER_TEXT', true );

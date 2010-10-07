@@ -23,18 +23,58 @@ add_filter('excerpt_length', 'custom_excerpt_length');
     <div id="left_content">
       <?php
         global $post;
+        $featured = get_posts('numberposts=1&category=5');
         $current_news = get_posts('numberposts=10&category=4');
+        ?>
+          <?php
+          foreach($featured as $post) :
+            setup_postdata($post);
+          ?>
+        <div class="featured_news">
+          <div class="featured_image">
+            <?php
+            if ( has_post_thumbnail() ) {
+            ?>
+            <a href="<?php the_permalink(); ?>">
+            	<?php the_post_thumbnail( 'featured-thumbnail' ); ?>
+            </a>
+            <?php
+            } else {
+            ?>
+              <a href="<?php the_permalink(); ?>">
+                <img src="<?php bloginfo('template_directory'); ?>/images/current_news_image_missing.png">
+              </a>
+            <?php
+            }
+            ?>
+          </div>
+
+          <a href="<?php the_permalink(); ?>" class="featured_title"><?php the_title(); ?></a>
+          <span class="excerpt">
+            <?php the_excerpt(); ?>
+          </span>
+        </div>
+          <?php endforeach; ?>
+        
+        
+        <?php
         foreach($current_news as $post) :
           setup_postdata($post);
-      ?>
+        ?>
       <div class="current_news">
         <div class="current_news_image">
           <?php
           if ( has_post_thumbnail() ) {
-          	the_post_thumbnail( 'current-news-thumbnail' );
+            ?>
+            <a href="<?php the_permalink(); ?>">
+            	<?php the_post_thumbnail( 'current-news-thumbnail' ); ?>
+            </a>
+            <?php
           } else {
           ?>
+          <a href="<?php the_permalink(); ?>">
             <img src="<?php bloginfo('template_directory'); ?>/images/current_news_image_missing.png">
+          </a>
           <?php
           }
           ?>

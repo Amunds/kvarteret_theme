@@ -27,7 +27,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	vertical-align: baseline;
 }
 body {
-	line-height: 1;
+	line-height: 1.35em;
 }
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
@@ -62,8 +62,8 @@ h1.entry-title {
 
 div.entry-content p {
   font-size: 0.85em;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 /* tables still need 'cellspacing="0"' in the markup */
@@ -132,13 +132,14 @@ div#main {
   background-color: #fff;
   margin-left: 12px;
   margin-right: 12px;
-  padding: 20px;
+  padding: 15px;
+  padding-top: 5px;
 }
 
 div.menu-header ul {
-  background-color: #E5190F;
   background-image: url('images/navigation_background.png');
   background-repeat: repeat-x;
+  background-color: #E5190F;
   height: 40px;
   padding-left: 30px;
 }
@@ -167,9 +168,7 @@ div.menu-header ul li a {
 }
 
 div.menu-header ul li a:hover {
-  background-image: url('images/current_menu_item.png');
-  background-repeat: no-repeat;
-  background-position: center bottom;
+  color: #ddd;
 }
 
 #content {
@@ -180,6 +179,20 @@ div#left_content {
   width: 600px;
   overflow: hidden;
   float: left;
+}
+
+div.featured_news {
+  width: 600px;
+  margin-bottom: 40px;
+}
+
+a.featured_title {
+  font-size: 1.2em;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: block;
+  color: #E5190F;
+  text-decoration: none;
 }
 
 div.current_news {
@@ -217,7 +230,6 @@ span.excerpt p {
   margin-left: 12px;
   margin-right: 12px;
   padding: 20px;
-  padding-bottom: 10px;
   -moz-border-radius-bottomleft: 15px;
   -moz-border-radius-bottomright: 15px;
   border-bottom-left-radius: 15px;
@@ -265,10 +277,12 @@ div.opening_hours_container span.opening_title{
   padding-bottom: 10px;
   padding-top: 5px;
   font-size: 1.1em;
+  line-height: 1em;
 }
 
 div.opening_hours_container span.opening_hours {
   font-size: 0.9em;
+  line-height: 1em;
 }
 
 img.small_penguins {

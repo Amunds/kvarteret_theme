@@ -45,14 +45,11 @@
 
 <body <?php body_class(); ?>>
 	<div id="header">
-			<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
-			<<?php echo $heading_tag; ?> id="site-title">
       <span>
         <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
           <img src="<?php bloginfo('template_directory'); ?>/images/logo.png" title="Det Akademiske Kvarter" alt="Det Akademiske Kvarter" />
         </a>
       </span>
-      </<?php echo $heading_tag; ?>>
 	</div>
 	<div id="navigation_bar" role="navigation">
 		<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
