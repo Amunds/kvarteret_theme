@@ -156,11 +156,12 @@ div.menu-header ul li.current_page_item {
   background-image: url('images/current_menu_item.png');
   background-repeat: no-repeat;
   background-position: center bottom;
-  padding-bottom: 11px;
+  padding-bottom: 9px;
 }
 
 div.menu-header ul li a {
-  color: #fff;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  color: #6d0500;
   text-decoration: none;
   font-size: 1.05em;
   padding-top: 9px;
@@ -168,7 +169,8 @@ div.menu-header ul li a {
 }
 
 div.menu-header ul li a:hover {
-  color: #ddd;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  color: #850600;
 }
 
 #content {
