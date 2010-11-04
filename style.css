@@ -313,6 +313,7 @@ img.small_penguins {
 .carousel-pagination span {
   text-decoration: none;
   color: black;
+  font-size: 0.85em;
 }
 .carousel-pagination a:hover, .carousel-pagination a:focus {
   text-decoration: underline;
