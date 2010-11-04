@@ -23,13 +23,16 @@ add_filter('excerpt_length', 'custom_excerpt_length');
     <div id="left_content">
       <?php
         global $post;
-        $featured = get_posts('numberposts=1&category=5');
+        $featured = get_posts('numberposts=4&category=5');
         $current_news = get_posts('numberposts=10&category=4');
         ?>
+        <div id="featured_holder">
+          <ul>
           <?php
           foreach($featured as $post) :
             setup_postdata($post);
-          ?>
+          ?>          
+          <li>  
         <div class="featured_news">
           <div class="featured_image">
             <?php
@@ -42,7 +45,7 @@ add_filter('excerpt_length', 'custom_excerpt_length');
             } else {
             ?>
               <a href="<?php the_permalink(); ?>">
-                <img src="<?php bloginfo('template_directory'); ?>/images/current_news_image_missing.png">
+                <img src="<?php bloginfo('template_directory'); ?>/images/featured_image_missing.png">
               </a>
             <?php
             }
@@ -54,8 +57,10 @@ add_filter('excerpt_length', 'custom_excerpt_length');
             <?php the_excerpt(); ?>
           </span>
         </div>
+          </li>
           <?php endforeach; ?>
-        
+          </ul>
+        </div>
         
         <?php
         foreach($current_news as $post) :

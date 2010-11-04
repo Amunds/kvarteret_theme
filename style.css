@@ -156,7 +156,8 @@ div.menu-header ul li.current_page_item {
   background-image: url('images/current_menu_item.png');
   background-repeat: no-repeat;
   background-position: center bottom;
-  padding-bottom: 9px;
+  padding-bottom: 11px;
+  line-height: 40px;
 }
 
 div.menu-header ul li a {
@@ -289,4 +290,20 @@ div.opening_hours_container span.opening_hours {
 
 img.small_penguins {
   float: right;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.carousel-control {
+  display: none;
+}
+
+.carousel-pagination a {
+  font-size: 0.9em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+  padding-left: 5px;
 }

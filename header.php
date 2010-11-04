@@ -33,17 +33,18 @@
 
 	 ?></title>
   
-
-   <link rel="profile" href="http://gmpg.org/xfn/11" />
    <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
    <?php
 	  if ( is_singular() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
 	  wp_head();
-  ?>
-  <script src="<?php bloginfo('template_directory'); ?>/javascript/application.js" 
-          type="text/javascript" charset="utf-8"></script>
+    ?>
+    <script src="<?php bloginfo('template_directory'); ?>/javascript/jquery.slider.js" 
+      type="text/javascript" charset="utf-8">
+    </script>
+    <script src="<?php bloginfo('template_directory'); ?>/javascript/application.js" 
+      type="text/javascript" charset="utf-8">
+    </script>
   </head>
 
   <body <?php body_class(); ?>>
