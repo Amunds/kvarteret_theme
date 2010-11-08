@@ -303,18 +303,25 @@ img.small_penguins {
 .carousel-pagination {
   margin-top: 10px;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 .carousel-pagination a {
   background: transparent url('images/apple-circle.gif') no-repeat 50% 50%;
-  padding: .3em;
   margin-right: 5px;
   cursor: pointer;
+  float: left;
+  width: 17px;
+  height: 17px;
+  line-height: 17px;
 }
 .carousel-pagination span {
   text-decoration: none;
   color: black;
-  font-size: 0.85em;
+  font-size: 0.8em;
+  padding-left: 5px;
+  font-weight: bold;
 }
-.carousel-pagination a:hover, .carousel-pagination a:focus {
-  text-decoration: underline;
+.carousel-pagination a:hover span, .carousel-pagination a:focus span {
+  text-decoration: none;
+  color: #666;
 }
