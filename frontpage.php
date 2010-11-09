@@ -39,7 +39,7 @@ add_filter('excerpt_length', 'custom_excerpt_length');
             if ( has_post_thumbnail() ) {
             ?>
             <a href="<?php the_permalink(); ?>">
-            	<?php the_post_thumbnail( 'featured-thumbnail' ); ?>
+            	<?php the_post_thumbnail('featured-thumbnail'); ?>
             </a>
             <?php
             } else {

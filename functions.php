@@ -111,11 +111,11 @@ function twentyten_setup() {
 	define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyten_header_image_height', 198 ) );
 
 	// We'll be using post thumbnails for custom header images on posts and pages.
-	// We want them to be 940 pixels wide by 198 pixels tall.
 	// Larger images will be auto-cropped to fit, smaller ones will be ignored. See header.php.
 	set_post_thumbnail_size( HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true );
   add_image_size( 'current-news-thumbnail', 290, 100 );
   add_image_size( 'featured-thumbnail', 600, 200, true );
+  add_image_size( 'room-thumbnail', 460, 175, true );
 
 	// Don't support text inside the header image.
 	define( 'NO_HEADER_TEXT', true );

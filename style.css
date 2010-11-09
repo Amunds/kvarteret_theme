@@ -56,6 +56,12 @@ h1.entry-title {
   letter-spacing: 0.1em;
 }
 
+h2 {
+  font-size: 0.9em;
+  font-weight: bold;
+  letter-spacing: .1em;
+}
+
 .give_me_room_above {
   padding-top: 20px;
 }
@@ -254,6 +260,14 @@ span.excerpt p {
   padding: 40px;
   padding-top: 10px;
   color: #555;
+}
+
+#sub_footer a {
+  color: #333;
+}
+
+#sub_footer a:hover {
+  color: #ddd;
 }
 
 #standard_right_menu {
