@@ -115,7 +115,7 @@ function twentyten_setup() {
 	set_post_thumbnail_size( HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true );
   add_image_size( 'current-news-thumbnail', 290, 100 );
   add_image_size( 'featured-thumbnail', 600, 200, true );
-  add_image_size( 'room-thumbnail', 460, 175, true );
+  add_image_size( 'room-thumbnail', 600, 150, true );
 
 	// Don't support text inside the header image.
 	define( 'NO_HEADER_TEXT', true );
