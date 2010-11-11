@@ -91,7 +91,7 @@ html {
 body {
   width: 1000px;
   margin: 0 auto;
-  font-family: Tahoma, sans-serif;
+  font-family: Helvetica, sans-serif;
   margin-top: 20px;
 }
 
@@ -338,4 +338,32 @@ img.small_penguins {
 .carousel-pagination a:hover span, .carousel-pagination a:focus span {
   text-decoration: none;
   color: #666;
+}
+
+.room_container h2 {
+  font-size: 1.1em;
+  color: #e68706;
+}
+
+.room_container p {
+  width: 660px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+img.attachment-room-thumbnail {
+  float: left;
+  width: 660px;
+  padding-bottom: 10px;
+}
+
+.room_infobox {
+  width: 250px;
+  padding: 10px;
+  float: right;
+  background-color: #ddd;
+  height: 180px;
+}
+.room_infobox p {
+  width: auto;
 }
