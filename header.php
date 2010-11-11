@@ -39,6 +39,8 @@
 		wp_enqueue_script( 'comment-reply' );
 	  wp_head();
     ?>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
     <script src="<?php bloginfo('template_directory'); ?>/javascript/jquery.slider.js" 
       type="text/javascript" charset="utf-8">
     </script>
