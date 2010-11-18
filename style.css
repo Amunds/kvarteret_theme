@@ -47,6 +47,14 @@ del {
 	text-decoration: line-through;
 }
 
+a {
+  color: #2f5a9b;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 h1.entry-title {
   font-size: 1.3em;
   margin: 0;
@@ -366,4 +374,9 @@ img.attachment-room-thumbnail {
 }
 .room_infobox p {
   width: auto;
+}
+
+.entry-meta {
+  font-size: 0.85em;
+  color: #888;
 }
