@@ -31,7 +31,7 @@ get_header(); ?>
 				</div><!-- #post-0 -->
 <?php endif; ?>
 			</div><!-- #content -->
-		</div><!-- #container -->
 
-<?php get_sidebar(); ?>
+		</div><!-- #container -->
+    </div>
 <?php get_footer(); ?>

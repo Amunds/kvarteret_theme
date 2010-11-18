@@ -52,6 +52,12 @@
 
   <body <?php body_class(); ?>>
 	  <div id="header">
+	    <div id="header_search_form">
+        <form action="?" method="get">
+          <input name="s" placeholder="Søk og trykk enter" type="search" />
+          <button id="search_button" title="søk">Søk</button>
+        </form>
+	    </div>
       <span>
         <a href="<?php echo home_url( '/' ); ?>" 
            title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
