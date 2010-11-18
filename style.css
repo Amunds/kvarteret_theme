@@ -184,8 +184,8 @@ div.menu-header ul li a {
 }
 
 div.menu-header ul li a:hover {
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
-  color: #850600;
+
+  color: #000;
 }
 
 #content {
@@ -260,6 +260,7 @@ span.excerpt p {
   background-repeat: repeat-x;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  font-size: 0.9em;
 }
 
 #sub_footer {
@@ -379,4 +380,5 @@ img.attachment-room-thumbnail {
 .entry-meta {
   font-size: 0.85em;
   color: #888;
+  margin-bottom: 10px;
 }
