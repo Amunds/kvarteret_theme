@@ -389,14 +389,32 @@ img.attachment-room-thumbnail {
 }
 
 #header_search_form input {
- border: 1px solid #777;
- padding: 5px;
- -moz-border-radius-bottomleft: 10px;
- -moz-border-radius-bottomright: 10px;
- border-bottom-left-radius: 10px;
- border-bottom-right-radius: 10px;
- -moz-border-radius-topleft: 10px;
- -moz-border-radius-topright: 10px;
- border-top-left-radius: 10px;
- border-top-right-radius: 10px;
+ border-bottom: 1px solid #888;
+ border-left: 1px  solid #888;
+ border-top: 1px solid #888;
+ border-right: 1px solid #888;
+ padding:0;
+ margin: 0;
+ padding-left: 5px;
+ -moz-border-radius-bottomleft: 5px;
+ -moz-border-radius-bottomright: 5px;
+ border-bottom-left-radius: 5px;
+ border-bottom-right-radius: 5px;
+ -moz-border-radius-topleft: 5px;
+ -moz-border-radius-topright: 5px;
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ height: 23px;
+ float: left;
+}
+
+#header_search_form button {
+	border: none;
+	float: left;
+	margin-left: 10px;
+  background: #fff url(images/search.png) no-repeat top right;
+  text-indent: -9999px;
+  height: 25px;
+  width: 52px;
+  cursor: pointer;
 }

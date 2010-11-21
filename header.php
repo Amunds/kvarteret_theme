@@ -54,7 +54,7 @@
 	  <div id="header">
 	    <div id="header_search_form">
         <form action="?" method="get">
-          <input name="s" placeholder="Søk og trykk enter" type="search" />
+          <input name="s" placeholder="Skriv inn søkeord" type="text" />
           <button id="search_button" title="søk">Søk</button>
         </form>
 	    </div>
