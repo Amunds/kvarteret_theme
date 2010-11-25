@@ -23,8 +23,8 @@ add_filter('excerpt_length', 'custom_excerpt_length');
     <div id="left_content">
       <?php
         global $post;
-        $featured = get_posts('numberposts=5&category_name="Featured"');
-        $current_news = get_posts('numberposts=10&category_name="Aktuelt"');
+        $featured = get_posts('numberposts=5&category_name=featured');
+        $current_news = get_posts('numberposts=10&category_name=aktuelt');
         ?>
         <div id="featured_holder">
           <ul>
