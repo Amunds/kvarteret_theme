@@ -282,6 +282,7 @@ span.excerpt p {
 #standard_right_menu {
   width: 320px;
   float: right;
+  overflow: hidden;
 }
 
 #standard_right_menu li {
