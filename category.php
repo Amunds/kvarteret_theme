@@ -6,7 +6,7 @@
  * @subpackage kvarteret
  * @since Kvarteret 1.0
  */
-
+// hello world
 get_header(); ?>
 
 		<div id="container">
