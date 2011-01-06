@@ -413,16 +413,19 @@ img.small_penguins {
   font-size: 1.1em;
   color: #e68706;
 }
-
+.room_container {
+width: 600px;
+float:left;
+}
 .room_container p {
-  width: 660px;
+  width: 600px;
   margin-bottom: 30px;
   overflow: hidden;
 }
 
 img.attachment-room-thumbnail {
   float: left;
-  width: 660px;
+  width: 365px;
   padding-bottom: 10px;
 }
 
