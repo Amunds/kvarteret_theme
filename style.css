@@ -56,18 +56,30 @@ a:hover {
 }
 
 h1.entry-title {
-  font-size: 1.3em;
+  font-size: 1.5em;
   margin: 0;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
   color: #E5190F;
   font-weight: bold;
   letter-spacing: 0.1em;
 }
 
 h2 {
-  font-size: 0.9em;
+  font-size: 1.2em;
   font-weight: bold;
   letter-spacing: .1em;
+}
+
+h3 {
+	margin-top: 15px;
+	margin-bottom: 7px;
+	font-size: 1.1em;
+}
+
+h4 {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-size: 1.0em
 }
 
 .give_me_room_above {
@@ -99,7 +111,7 @@ html {
 body {
   width: 1000px;
   margin: 0 auto;
-  font-family: Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   margin-top: 20px;
 }
 
@@ -485,4 +497,35 @@ img.attachment-room-thumbnail {
 }
 #header_follow_buttons a {
 	text-decoration: none;
+}
+
+/* stiler til romsiden */
+
+/* kapasitet, etasje, etc. */
+.room_info {
+	font-size: 13px;
+	float:right;
+	width: 192px;
+	height: 76px;
+	padding: 10px;
+	background: #333;
+	color: #fff;
+	margin-bottom: 10px;
+}
+.room_info tr {
+	padding: 10px;
+}
+.room_info td {
+	padding-left: 10px;
+	width: 70px;
+}
+.room_opening_hours {
+	float:right;
+	clear:right;
+	font-size: 13px;
+	color: #fff;
+	width: 172px;
+	height: 138px;
+	padding: 10px;
+	background: #666;
 }
