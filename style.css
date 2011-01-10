@@ -188,7 +188,7 @@ div.menu-header ul {
 }
 
 div.menu-header ul li {
-  display: inline-block;
+  display: inline;
   /*padding-left: 10px;
   padding-right: 10px;*/
   /*line-height: 40px;*/
