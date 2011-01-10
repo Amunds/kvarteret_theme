@@ -446,14 +446,13 @@ img.attachment-room-thumbnail {
   color: #888;
   margin-bottom: 10px;
 }
-
+#header_inline_wrap {
+	float:right;
+	margin-right: 20px;
+	text-align:right;
+}
 #header_search_form {
-  float: right;
-  clear:right;
   display: block;
-  margin-right: 20px;
-  /*margin-bottom: -20px;*/
-  z-index: 10;
   height: 23px;
 }
 
@@ -497,10 +496,7 @@ img.attachment-room-thumbnail {
 
 #header_follow_buttons {
 	font-size: 0.7em;
-	float:right;
-	clear:right;
 	margin-bottom: 10px;
-	margin-right: 20px;
 }
 #header_follow_buttons img{
 	vertical-align: text-bottom;

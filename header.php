@@ -54,17 +54,19 @@
 
   <body <?php body_class(); ?>>
 	  <div id="header">
-		<div id="header_follow_buttons">
-			<a href="http://et.kvarteret.no/endre/kvarteret_symfony_events/web/api/atom/upcomingEvents"><img src="<?php bloginfo('template_directory'); ?>/images/rss-l.png" alt="Facebook" /></a> 
-			<a href="http://www.facebook.com/pages/Det-Akademiske-Kvarter/20210537496"><img src="<?php bloginfo('template_directory'); ?>/images/facebook-l.png" alt="Facebook" /></a> 
-			<a href="http://twitter.com/Kvarteret"><img src="<?php bloginfo('template_directory'); ?>/images/twitter-l.png" alt="Twitter" /></a>
+		<div id="header_inline_wrap">
+			<div id="header_follow_buttons">
+				<a href="http://et.kvarteret.no/endre/kvarteret_symfony_events/web/api/atom/upcomingEvents"><img src="<?php bloginfo('template_directory'); ?>/images/rss-l.png" alt="Facebook" /></a> 
+				<a href="http://www.facebook.com/pages/Det-Akademiske-Kvarter/20210537496"><img src="<?php bloginfo('template_directory'); ?>/images/facebook-l.png" alt="Facebook" /></a> 
+				<a href="http://twitter.com/Kvarteret"><img src="<?php bloginfo('template_directory'); ?>/images/twitter-l.png" alt="Twitter" /></a>
+			</div>
+			<div id="header_search_form">
+				<form action="?" method="get">
+				  <input name="s" id="search_input_box" value="Skriv inn søkeord" type="text" />
+				  <button id="search_button" title="søk">Søk</button>
+				</form>
+			</div>
 		</div>
-	    <div id="header_search_form">
-			<form action="?" method="get">
-			  <input name="s" id="search_input_box" value="Skriv inn søkeord" type="text" />
-			  <button id="search_button" title="søk">Søk</button>
-			</form>
-	    </div>
       <span>
         <a href="<?php echo home_url( '/' ); ?>" 
            title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
