@@ -428,7 +428,6 @@ float:left;
 
 img.attachment-room-thumbnail {
   float: left;
-  width: 365px;
   padding-bottom: 10px;
 }
 
@@ -482,11 +481,18 @@ img.attachment-room-thumbnail {
 	border: none;
 	float: left;
 	margin-left: 5px;
-  background: #fff url(images/search.png) no-repeat top right;
-  text-indent: -9999px;
+  background: #fff url(images/soek.png) right 0px;
+  /*text-indent: -9999px;*/
   height: 25px;
   width: 52px;
+  color: #fff;
   cursor: pointer;
+}
+#header_search_form button:hover {
+	background: url(images/soek.png) right 50px;
+}
+#header_search_form button:active {
+	background: url(images/soek.png) right 25px;
 }
 
 #header_follow_buttons {
