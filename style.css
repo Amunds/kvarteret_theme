@@ -434,7 +434,6 @@ img.attachment-room-thumbnail {
   padding: 10px;
   float: right;
   background-color: #eee;
-  height: 180px;
 }
 .room_infobox p {
   width: auto;
@@ -448,6 +447,7 @@ img.attachment-room-thumbnail {
 
 #header_search_form {
   float: right;
+  clear:right;
   display: block;
   margin-right: 20px;
   /*margin-bottom: -20px;*/
@@ -490,8 +490,8 @@ img.attachment-room-thumbnail {
 	font-size: 0.7em;
 	float:right;
 	clear:right;
-	margin-top: 10px;
-	margin-right: 30px;
+	margin-bottom: 10px;
+	margin-right: 20px;
 }
 #header_follow_buttons img{
 	vertical-align: text-bottom;
@@ -502,6 +502,8 @@ img.attachment-room-thumbnail {
 	text-decoration: none;
 }
 
+
+
 /* stiler til romsiden */
 
 /* kapasitet, etasje, etc. */
@@ -509,7 +511,6 @@ img.attachment-room-thumbnail {
 	font-size: 13px;
 	float:right;
 	width: 192px;
-	height: 76px;
 	padding: 10px;
 	background: #333;
 	color: #fff;
@@ -528,7 +529,6 @@ img.attachment-room-thumbnail {
 	font-size: 13px;
 	color: #fff;
 	width: 172px;
-	height: 138px;
 	padding: 10px;
 	background: #666;
 }
