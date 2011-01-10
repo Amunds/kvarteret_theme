@@ -11,6 +11,8 @@
   <html lang="nb">
   <head>
     <meta charset="utf-8">
+    <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
+    <link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/favicon.ico">
     <title><?php
 	  /*
 	   * Print the <title> tag based on what is being viewed.
