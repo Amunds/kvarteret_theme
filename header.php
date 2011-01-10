@@ -58,13 +58,10 @@
 			<a href="http://et.kvarteret.no/endre/kvarteret_symfony_events/web/api/atom/upcomingEvents"><img src="<?php bloginfo('template_directory'); ?>/images/rss-l.png" alt="Facebook" /></a> 
 			<a href="http://www.facebook.com/pages/Det-Akademiske-Kvarter/20210537496"><img src="<?php bloginfo('template_directory'); ?>/images/facebook-l.png" alt="Facebook" /></a> 
 			<a href="http://twitter.com/Kvarteret"><img src="<?php bloginfo('template_directory'); ?>/images/twitter-l.png" alt="Twitter" /></a>
-			<!--<strong>Følg oss:</strong>
-			<a href="http://www.facebook.com/pages/Det-Akademiske-Kvarter/20210537496"><img src="<?php bloginfo('template_directory'); ?>/images/facebook.png" alt="Facebook" />Facebook</a> 
-			<a href="http://twitter.com/Kvarteret"><img src="<?php bloginfo('template_directory'); ?>/images/twitter.png" alt="Twitter" />Twitter</a>-->
 		</div>
 	    <div id="header_search_form">
 			<form action="?" method="get">
-			  <input name="s" placeholder="Skriv inn søkeord" type="text" />
+			  <input name="s" value="Skriv inn søkeord" type="text" />
 			  <button id="search_button" title="søk">Søk</button>
 			</form>
 	    </div>
