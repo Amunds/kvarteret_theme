@@ -1,6 +1,6 @@
 jQuery(document).ready(function() {
 	//global vars
-	var searchBoxInput = jQuery("#header_search_form input");
+	var searchBoxInput = jQuery("input#s, input#search_input_box");
 	var searchBoxDefaultName = "Skriv inn søkeord";
 
 	//Searchbox show/hide default text if needed  
