@@ -61,7 +61,7 @@
 				<a href="http://twitter.com/Kvarteret"><img src="<?php bloginfo('template_directory'); ?>/images/twitter-l.png" alt="Twitter" /></a>
 			</div>
 			<div id="header_search_form">
-				<form action="?" method="get">
+				<form action="<?php echo home_url( '/' ); ?>?" method="get">
 				  <input name="s" id="search_input_box" value="Skriv inn søkeord" type="text" />
 				  <button id="search_button" title="søk">Søk</button>
 				</form>
