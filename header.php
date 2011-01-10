@@ -61,7 +61,7 @@
 		</div>
 	    <div id="header_search_form">
 			<form action="?" method="get">
-			  <input name="s" value="Skriv inn søkeord" type="text" />
+			  <input name="s" id="search_input_box" value="Skriv inn søkeord" type="text" />
 			  <button id="search_button" title="søk">Søk</button>
 			</form>
 	    </div>
