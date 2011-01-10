@@ -56,7 +56,7 @@
 	  <div id="header">
 		<div id="header_inline_wrap">
 			<div id="header_follow_buttons">
-				<a href="http://et.kvarteret.no/endre/kvarteret_symfony_events/web/api/atom/upcomingEvents"><img src="<?php bloginfo('template_directory'); ?>/images/rss-l.png" alt="Facebook" /></a> 
+				<a href="https://intern.kvarteret.no/events/api/atom/upcomingEvents"><img src="<?php bloginfo('template_directory'); ?>/images/rss-l.png" alt="Facebook" /></a> 
 				<a href="http://www.facebook.com/pages/Det-Akademiske-Kvarter/20210537496"><img src="<?php bloginfo('template_directory'); ?>/images/facebook-l.png" alt="Facebook" /></a> 
 				<a href="http://twitter.com/Kvarteret"><img src="<?php bloginfo('template_directory'); ?>/images/twitter-l.png" alt="Twitter" /></a>
 			</div>
