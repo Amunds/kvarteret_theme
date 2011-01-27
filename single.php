@@ -18,7 +18,18 @@ get_header(); ?>
 					<h1 class="entry-title"><?php the_title(); ?></h1>
 
 					<div class="entry-meta">
-					  Skrevet av: <?php echo get_post_meta($post->ID, "article_author", true); ?>
+					  Skrevet av:
+            <?php
+            $custom_author = get_post_meta($post->ID, "article_author", true);
+            $curauth = get_the_author();
+            if ( $custom_author ) {
+              echo $custom_author;
+            }
+            else {
+              echo $curauth;
+            }
+            ?>
+              <?php echo get_post_meta($post->ID, "article_author", true); ?>
 					</div><!-- .entry-meta -->
 
 					<div class="entry-content">
