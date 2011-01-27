@@ -11,5 +11,5 @@ jQuery(document).ready(function() {
 		if($(this).val() == "") $(this).val(searchBoxDefaultName);  
 	}); 
 	
-  jQuery("#featured_holder").carousel( { direction: "vertical", autoSlide: true, pagination: true, autoSlideInterval: 15000 }  );
+  jQuery("#featured_holder").carousel( { direction: "vertical", autoSlide: true, pagination: true, autoSlideInterval: 8000 }  );
 });
