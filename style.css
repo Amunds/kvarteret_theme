@@ -538,3 +538,7 @@ img.attachment-room-thumbnail {
 	padding: 10px;
 	background: #666;
 }
+
+.type-post {
+  width: 600px;
+}
