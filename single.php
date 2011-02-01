@@ -29,7 +29,6 @@ get_header(); ?>
               echo $curauth;
             }
             ?>
-              <?php echo get_post_meta($post->ID, "article_author", true); ?>
 					</div><!-- .entry-meta -->
 
 					<div class="entry-content">
