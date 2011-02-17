@@ -20,7 +20,7 @@ get_header(); ?>
         <?php } ?>
       <!-- This loops through all the children of the samarbeidspartnere page. -->
       <?php query_posts(array('post_parent' => 15, 'post_type' => 'page', 'post_status' => 'published', 'posts_per_page' => -1)); while (have_posts()) { the_post(); ?>
-        <div class="room_container">
+        <div class="samarbeids_container">
           <a id="<?php the_ID() ?>"></a>
           <h2><?php the_title(); ?></h2>
           <?php the_post_thumbnail('samarbeids-logo'); ?>

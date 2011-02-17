@@ -414,16 +414,22 @@ img.small_penguins {
 	background: #0D0F0A;
 }
 
-.room_container h2 {
+.room_container, .samarbeids_container h2 {
   font-size: 1.1em;
   color: #e68706;
 }
-.room_container {
+.room_container, .samarbeids_container {
   width: 600px;
   float:left;
   overflow: hidden;
   margin-top: 10px;
 }
+
+.samarbeids_container p {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
 .room_container p {
   width: 600px;
   margin-bottom: 30px;
