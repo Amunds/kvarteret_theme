@@ -20,7 +20,8 @@ add_filter('excerpt_length', 'custom_excerpt_length');
 ?>
 	<?php get_sidebar(); ?>
   <div id="content" role="main" class="room_content">
-      <h1 class="entry-title"><?php the_title(); ?></h1>
+    <h1 class="entry-title"><?php the_title(); ?></h1>
+    <div class="entry-content">
       <!-- This loops through all the children of the Rom page. -->
       <?php query_posts(array('post_parent' => 11, 'post_type' => 'page', 'post_status' => 'published', 'posts_per_page' => -1)); while (have_posts()) { the_post(); ?>
         <div class="room_container">
@@ -32,5 +33,6 @@ add_filter('excerpt_length', 'custom_excerpt_length');
         </div>
         <?php } ?>
   <!-- #content -->
+    </div>
 	</div><!-- #content -->
 <?php get_footer(); ?>

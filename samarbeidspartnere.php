@@ -14,6 +14,7 @@ get_header(); ?>
 	<?php get_sidebar(); ?>
   <div id="content" role="main">
       <h1 class="entry-title"><?php the_title(); ?></h1>
+      <div class="entry-content">
       <?php query_posts(array('post_parent' => 15, 'post_type' => 'page', 'post_status' => 'published', 'posts_per_page' => -1)); while (have_posts()) { the_post(); ?>
         <a class="kultur_link" href="#<?php the_ID()?>"><?php the_title(); ?></a>
         <?php } ?>
@@ -27,5 +28,6 @@ get_header(); ?>
         </div>
         <?php } ?>
   <!-- #content -->
+    </div>
 	</div><!-- #content -->
 <?php get_footer(); ?>
