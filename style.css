@@ -230,6 +230,7 @@ div.menu-header ul li.current_page_item a:hover {
 
 #content {
   overflow: hidden;
+  font-size: 0.9em;
 }
 
 div#left_content {
