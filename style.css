@@ -178,6 +178,7 @@ div#main {
   margin-right: 12px;
   padding: 15px;
   padding-top: 5px;
+  overflow: hidden;
 }
 
 div.menu-header ul {
@@ -418,8 +419,10 @@ img.small_penguins {
   color: #e68706;
 }
 .room_container {
-width: 600px;
-float:left;
+  width: 600px;
+  float:left;
+  overflow: hidden;
+  margin-top: 10px;
 }
 .room_container p {
   width: 600px;

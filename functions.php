@@ -116,6 +116,7 @@ function twentyten_setup() {
   add_image_size( 'current-news-thumbnail', 290, 100 );
   add_image_size( 'featured-thumbnail', 600, 200, true );
   add_image_size( 'room-thumbnail', 390, 200, true );
+  add_image_size( 'samarbeids-logo', 200, 80 );
 
 	// Don't support text inside the header image.
 	define( 'NO_HEADER_TEXT', true );
