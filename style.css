@@ -88,7 +88,7 @@ h4 {
 }
 
 div.entry-content p {
-  font-size: 0.85em;
+  font-size: 0.8em;
   padding-top: 8px;
   padding-bottom: 8px;
 }
@@ -230,7 +230,6 @@ div.menu-header ul li.current_page_item a:hover {
 
 #content {
   overflow: hidden;
-  font-size: 0.9em;
 }
 
 div#left_content {
