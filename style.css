@@ -414,7 +414,7 @@ img.small_penguins {
 	background: #0D0F0A;
 }
 
-.room_container, .samarbeids_container h2 {
+.room_container h2, .samarbeids_container h2 {
   font-size: 1.1em;
   color: #e68706;
 }
