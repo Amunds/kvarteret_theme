@@ -15,9 +15,6 @@ get_header(); ?>
   <div id="content" role="main">
       <h1 class="entry-title"><?php the_title(); ?></h1>
       <div class="entry-content">
-      <?php query_posts(array('post_parent' => 15, 'order' => 'ASC', 'order_by' => 'menu_order', 'post_type' => 'page', 'post_status' => 'published', 'posts_per_page' => -1)); while (have_posts()) { the_post(); ?>
-        <a class="kultur_link" href="#<?php the_ID()?>"><?php the_title(); ?></a>
-        <?php } ?>
       <!-- This loops through all the children of the samarbeidspartnere page. -->
       <?php query_posts(array('post_parent' => 15,  'order' => 'ASC', 'order_by' => 'menu_order', 'post_type' => 'page', 'post_status' => 'published', 'posts_per_page' => -1)); while (have_posts()) { the_post(); ?>
         <div class="samarbeids_container">
