@@ -554,29 +554,46 @@ img.attachment-room-thumbnail {
 .widget_nav_menu div ul {
   margin: 0;
   padding: 0;
-  float: right;
-  margin-right: 10px;
-  margin-top: 35px;
-  padding-left: 35px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 10px;
-  text-align: right;
-  border-left: 1px solid #999;
-  background: -moz-linear-gradient(100% 100% 180deg, #ddd, #fff);
-  background: -webkit-gradient(linear, left top, right top, from(#ddd), to(#fff));
+  
+  text-align: left;
+  border: 1px solid #999;
+  background: -moz-linear-gradient(100% 100% 90deg, #efefef, #fff);
+  background: -webkit-gradient(linear, center top, center bottom, from(#fff), to(#efefef));
+  
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.widget_nav_menu div ul li {
+	padding-left: 0px;
+	margin-left: -1px;
 }
 
 .widget_nav_menu div ul li a {
-  font-size: 1.15em;
-  padding-bottom: 4px;
-  color: #333;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  margin-left: 1px;
+  display: block;
+  padding:4px;
+  padding-left: 15px;
+  font-size: 1em;
+}
+
+.widget_nav_menu div ul li.current-menu-item {
+	background:url(images/widget_nav_menu-current.png) left center no-repeat;
 }
 
 .widget_nav_menu div ul li.current-menu-item a{
   font-weight: bold;
-  text-decoration: none;  
+  text-decoration: none; 
+  border-bottom: 1px dotted #ccc;
+  border-top: 1px dotted #ccc;
+}
+
+.widget_nav_menu div ul li:first-child.current-menu-item a {
+	border-top: 0;
+}
+.widget_nav_menu div ul li:last-child.current-menu-item a {
+	border-bottom: 0;
 }
 
 .slickr-flickr-gallery ul li {
