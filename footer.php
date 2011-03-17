@@ -20,8 +20,8 @@
 	      </span>
 	      <span class="opening_hours">
 	        Man-ons 20:00-01:00<br />
-	        Tors-Lør 20:00-03:00<br />
-	        Søn 20:00-00:00
+	        Tors-Lør 19:00-03:00<br />
+	        Søn åpen ved fotball/behov
 	      </span>
 	    </div>
 	    <div class="opening_hours_container">
@@ -30,7 +30,7 @@
 	      </span>
 	      <span class="opening_hours">
 	        Man-ons 11:30-23:00<br />
-	        Tors 11:30-01:00<br />
+	        Tors 11:30-03:00<br />
 	        Fre 11:30-03:00<br />
 	        Lør 15:00-03:00
 	      </span>
@@ -40,7 +40,7 @@
 	        Halvtimen (bar 3. etg)
 	      </span>
 	      <span class="opening_hours">
-	        Tors-Lør 21:00-03:00
+	        Fre-Lør 19:00-03:00
 	      </span>
 	    </div>
       <!-- <img src="<?php bloginfo('template_directory'); ?>/images/small_penguins.png" class="small_penguins">-->
