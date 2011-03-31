@@ -45,7 +45,7 @@ add_filter('excerpt_length', 'custom_excerpt_length');
             } else {
             ?>
               <a href="<?php the_permalink(); ?>">
-                <img src="<?php bloginfo('template_directory'); ?>/images/featured_image_missing.png">
+                <img src="<?php bloginfo('template_directory'); ?>/images/featured_image_missing_<?php echo rand(1,2) ?>.png">
               </a>
             <?php
             }
@@ -78,7 +78,7 @@ add_filter('excerpt_length', 'custom_excerpt_length');
           } else {
           ?>
           <a href="<?php the_permalink(); ?>">
-            <img src="<?php bloginfo('template_directory'); ?>/images/current_news_image_missing.png">
+            <img src="<?php bloginfo('template_directory'); ?>/images/current_news_image_missing_<?php echo rand(1,2) ?>.png">
           </a>
           <?php
           }
