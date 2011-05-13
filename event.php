@@ -117,7 +117,7 @@ get_header(); ?>
 
 						<div class="entry-content">
 
-						<?php the_content() ?>
+						<?php the_post(); the_content() ?>
 
 						</div>
 
