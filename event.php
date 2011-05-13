@@ -113,15 +113,15 @@ get_header(); ?>
 
 <!-- # end festival page -->
 <?php else: ?>
-<!-- # agenda page -->
+<!-- # agenda or ordinary page -->
 
 						<div class="entry-content">
 
-						<?php echo dew_agenda_shortcode_handler (array()) ?>
+						<?php the_content() ?>
 
 						</div>
 
-<!-- #end agenda page -->
+<!-- #end agenda or ordinary page -->
 <?php endif ?>
 					</div>
 				  </div>
