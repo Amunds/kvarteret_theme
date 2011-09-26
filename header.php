@@ -67,31 +67,40 @@
 
   <body <?php body_class(); ?>>
 	  <div id="header">
-		<div id="header_inline_wrap">
-			<div id="header_follow_buttons">
-				<a href="https://intern.kvarteret.no/events/api/atom/upcomingEvents"><img src="<?php bloginfo('template_directory'); ?>/images/rss-l.png" alt="Upcoming events" /></a> 
-				<a href="http://www.facebook.com/pages/Det-Akademiske-Kvarter/20210537496"><img src="<?php bloginfo('template_directory'); ?>/images/facebook-l.png" alt="Facebook" /></a> 
-				<a href="http://twitter.com/Kvarteret"><img src="<?php bloginfo('template_directory'); ?>/images/twitter-l.png" alt="Twitter" /></a>
-			</div>
-			<div id="header_search_form">
-				<form action="<?php echo home_url( '/' ); ?>?" method="get">
-				  <input name="s" id="search_input_box" value="Skriv inn søkeord" type="text" />
-				  <button id="search_button" title="søk">Søk</button>
-				</form>
-			</div>
+		
+		<ul id="header_opening_times">
+			<li><strong>Mon-fre</strong> 11.30 - 01.00</li>
+			<li><strong>Tor-lør</strong> 11:30 - 03:00</li>
+			<li><strong>Søn</strong> åpen ved fotball/behov</li>
+		</ul>
+		
+		<div id="header_follow_buttons">
+			<a href="https://intern.kvarteret.no/events/api/atom/upcomingEvents"><img src="<?php bloginfo('template_directory'); ?>/images/rss-l.png" alt="Upcoming events" /></a> 
+			<a href="http://www.facebook.com/pages/Det-Akademiske-Kvarter/20210537496"><img src="<?php bloginfo('template_directory'); ?>/images/facebook-l.png" alt="Facebook" /></a> 
+			<a href="http://twitter.com/Kvarteret"><img src="<?php bloginfo('template_directory'); ?>/images/twitter-l.png" alt="Twitter" /></a>
 		</div>
-      <span>
+		
+		<div id="header_search_form">
+			<form action="<?php echo home_url( '/' ); ?>?" method="get">
+			  <input name="s" id="search_input_box" placeholder="Skriv inn søkeord" type="text" />
+			  <button id="search_button" title="søk">søk</button>
+			</form>
+		</div>
+		
         <a href="<?php echo home_url( '/' ); ?>" 
            title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
-           rel="home">
+           rel="home" id="logo">
            <img src="<?php bloginfo('template_directory'); ?>/images/logo.png" 
                 title="Det Akademiske Kvarter" 
                 alt="Det Akademiske Kvarter" />
         </a>
-      </span>
+
 	  </div>
 	  <div id="navigation_bar" role="navigation">
-		  <?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
+		<div class="menu-header">
+		  <?php wp_nav_menu( array( 'container_class' => 'menu-left', 'menu' => 'Nav left' ) ); ?>
+		  <?php wp_nav_menu( array( 'container_class' => 'menu-right', 'menu' => 'Nav right' ) ); ?>
+		  
 		  <span id="navigation_sides">
 	      <img src="<?php bloginfo('template_directory'); ?>/images/navigation_left.png" id="fancy_left">
 	      <span id="white_navigation_background"></span>

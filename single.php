@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * The Template for displaying all single posts.
  *
@@ -8,35 +8,65 @@
  */
 
 get_header(); ?>
-
 		<div id="container">
 			<div id="content" role="main">
-
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
-				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<h1 class="entry-title"><?php the_title(); ?></h1>
-
-					<div class="entry-meta">
-					  Skrevet av:
-            <?php
-            $custom_author = get_post_meta($post->ID, "article_author", true);
-            $curauth = get_the_author();
-            if ( $custom_author ) {
-              echo $custom_author;
-            }
-            else {
-              echo $curauth;
-            }
+				<?php
+            if ( has_post_thumbnail() ) {
             ?>
+            <a href="<?php the_permalink(); ?>">
+            	<?php the_post_thumbnail('full-thumbnail'); ?>
+            </a>
+			<h1 class="article-title"><?php the_title(); ?></h1>
+            <?php } else { ?>
+				<h1 class="entry-title"><?php the_title(); ?></h1>
+			<?php } ?>
+				<div id="left_content">
+					<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+					<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+						<div class="entry-meta">
+						  Skrevet av:
+					<?php
+						$custom_author = get_post_meta($post->ID, "article_author", true);
+						$curauth = get_the_author();
+						if ( $custom_author ) {
+						  echo $custom_author;
+						}
+						else {
+						  echo $curauth;
+						}
+					?>
 					</div><!-- .entry-meta -->
 
 					<div class="entry-content">
 						<?php the_content(); ?>
 						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentyten' ), 'after' => '</div>' ) ); ?>
 					</div><!-- .entry-content -->
-
-<?php if ( get_the_author_meta( 'description' ) ) : // If a user has filled out their description, show a bio on their entries  ?>
+					</div>
+				</div>
+				<div id="standard_right_menu" class="widget-area">
+					<h2>Meta</h2>
+					Publisert <?php echo the_date(); ?> <br />
+					Skrevet av <?php
+						$custom_author = get_post_meta($post->ID, "article_author", true);
+						$curauth = get_the_author();
+						if ( $custom_author ) {
+						  echo $custom_author;
+						}
+						else {
+						  echo $curauth;
+						}
+					?>
+					
+					<h2>Abonner på nytt fra Kvarteret</h2>
+					<ul>
+						<li><a href="http://kvarteret.no/feed">RSS</a></li>
+						<li><a href="https://www.facebook.com/Kvarteret">Facebook</a></li>
+						<li><a href="http://twitter.com/#!/kvarteret">Twitter</a></li>
+					</ul>
+				</div>
+				
+				<?php if ( get_the_author_meta( 'description' ) ) : // If a user has filled out their description, show a bio on their entries  ?>
 					<div id="entry-author-info">
 						<div id="author-avatar">
 							<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'twentyten_author_bio_avatar_size', 60 ) ); ?>

@@ -115,6 +115,7 @@ function twentyten_setup() {
 	set_post_thumbnail_size( HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true );
   add_image_size( 'current-news-thumbnail', 290, 100, true );
   add_image_size( 'featured-thumbnail', 600, 200, true );
+  add_image_size( 'full-thumbnail', 940, 313, true );
   add_image_size( 'room-thumbnail', 390, 200, true );
   add_image_size( 'samarbeids-logo', 200, 80 );
 
