@@ -485,3 +485,33 @@ function twentyten_posted_in() {
 	);
 }
 endif;
+
+	/**
+	 * Ouput event or festival title in header, overrides the page's title
+	 */
+	function dew_arrangement_template_wp_title ($title, $sep, $seplocation) {
+		global $dew_title;
+
+		if ( ! empty($dew_title) ) {
+			$title = $dew_title;
+		}
+
+		$t_sep = '%WP_TITILE_SEP%'; // Temporary separator, for accurate flipping, if necessary
+
+		$prefix = '';
+		if ( ! empty($title) ) {
+			$prefix = " $sep ";
+		}
+
+	 	// Determines position of the separator and direction of the breadcrumb
+		if ( 'right' == $seplocation ) { // sep on right, so reverse the order
+			$title_array = explode( $t_sep, $title );
+			$title_array = array_reverse( $title_array );
+			$title = implode( " $sep ", $title_array ) . $prefix;
+		} else {
+			$title_array = explode( $t_sep, $title );
+			$title = $prefix . implode( " $sep ", $title_array );
+		}
+
+		return $title;
+	}
