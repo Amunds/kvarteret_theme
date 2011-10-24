@@ -8,35 +8,34 @@
  */
 
 get_header(); ?>
-		<div id="container">
-			<div id="content" role="main">
+		<div id="content" role="main">
 				<?php
             if ( has_post_thumbnail() ) {
             ?>
-            <a href="<?php the_permalink(); ?>">
-            	<?php the_post_thumbnail('full-thumbnail'); ?>
-            </a>
-			<h1 class="article-title"><?php the_title(); ?></h1>
+				<a href="<?php the_permalink(); ?>">
+					<?php the_post_thumbnail('full-thumbnail'); ?>
+				</a>
+				<h1 class="article-title"><?php the_title(); ?></h1>
+				
             <?php } else { ?>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php } ?>
+			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+				<div class="article_meta_header">
+					<?php echo the_date(); ?> - 
+					av <?php
+							$custom_author = get_post_meta($post->ID, "article_author", true);
+							$curauth = get_the_author();
+							if ( $custom_author ) {
+							  echo $custom_author;
+							}
+							else {
+							  echo $curauth;
+							}
+						?>
+				</div>
 				<div id="left_content">
-					<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 					<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-						<div class="entry-meta">
-						  Skrevet av:
-					<?php
-						$custom_author = get_post_meta($post->ID, "article_author", true);
-						$curauth = get_the_author();
-						if ( $custom_author ) {
-						  echo $custom_author;
-						}
-						else {
-						  echo $curauth;
-						}
-					?>
-					</div><!-- .entry-meta -->
 
 					<div class="entry-content">
 						<?php the_content(); ?>
@@ -45,8 +44,7 @@ get_header(); ?>
 					</div>
 				</div>
 				<div id="standard_right_menu" class="widget-area">
-					<h2>Meta</h2>
-					Publisert <?php echo the_date(); ?> <br />
+					<!--Publisert <?php echo the_date(); ?> <br />
 					Skrevet av <?php
 						$custom_author = get_post_meta($post->ID, "article_author", true);
 						$curauth = get_the_author();
@@ -58,8 +56,8 @@ get_header(); ?>
 						}
 					?>
 					
-					<h2>Abonner på nytt fra Kvarteret</h2>
-					<ul>
+					<h2>Abonner på nytt fra Kvarteret</h2>-->
+					<ul class="article_feed_icons">
 						<li><a href="http://kvarteret.no/feed">RSS</a></li>
 						<li><a href="https://www.facebook.com/Kvarteret">Facebook</a></li>
 						<li><a href="http://twitter.com/#!/kvarteret">Twitter</a></li>
@@ -87,6 +85,5 @@ get_header(); ?>
 
 <?php endwhile; // end of the loop. ?>
 
-		</div><!-- #container -->
 </div>
 <?php get_footer(); ?>

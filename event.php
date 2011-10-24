@@ -83,49 +83,118 @@ if (($event_id > 0) || ($festival_id > 0)) {
 
 get_header(); ?>
 
-			<div id="content" role="main">
-				<div id="left_content">
-					<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<?php if ( is_front_page() ) { ?>
-						<h2 class="entry-title"><?php echo $title; ?></h2>
-					<?php } else { ?>
-						<h1 class="entry-title"><?php echo $title; ?></h1>
-					<?php } ?>
+<div id="content">
+<?php 
+/** 
+* Templates for the different areas of the Event pages
+*/
+// Fullview/agenda listing
+function dew_template_agenda_event() {
+	return '
+		<li class="agenda_compact_event_wrapper">
+			<a href="%(readMore)s">%(title)s</a><br />
+			<span class="agenda_compact_event_details">%(startTime)s - %(category)s - %(location)s %(festivalLink)s</span>
+		</li>
+	';
+}
+function dew_template_agenda_eventcollection() {
+	return '
+		<li class="agenda_day clearfix">
+			<h2 class="agenda_box">
+				<span class="agenda_day_name">%(dayName)s</span>
+				<span class="agenda_day_number">%(dayNumber)s</span>
+				<span class="agenda_month_name">%(monthName)s</span>
+			</h2>
+			<ul class="event_date_list">
+				%(eventCollection)s
+			</ul>
+		</li>
+	';
+}
 
-<?php if ( $event_id > 0 ): ?>
-<!-- # event page -->
+// Event Fullview/Single event
+function dew_template_single_event() {
+	return '
+		<h1 class="entry-title">Arrangement: %(title)s</h1>
+		<div id="left_content">
+			<div class="ingress">%(leadParagraph)s</div>
+			<div class="full">%(description)s</div>
+		</div>
+		<div id="standard_right_menu" class="widget-area">
+			%(festivalLink)s
+			%(arranger)s-logo<br />
+			
+			%(category)s i %(location)s <br />
+			Dato: %(renderedDate)s <br />
+			Arrangør: %(arranger)s<br />
+			%(extra)s
+			
+			<h2>Kalender</h2>
+			<a href="%(iCalUrl)s">Legg til i kalender (iCal)</a><br />
+			<a href="%(googleCalUrl)s">Legg til i Google Calendar</a>
+		</div>
+	';
+}
 
-						<div class="entry-content">
+//festival
+function dew_template_festival() {
+	return '
+		<h1 class="entry-title">Festival: %(title)s</h1>
+		<div id="left_content">
+			<ul>
+				%(festivalEvents)s
+			</ul>
+		</div>
+		<div id="standard_right_menu" class="widget-area">
+			Sted: %(location)s <br />
+			Dato: %(renderedDate)s <br />
+			Arrangør: %(arranger)s<br />
+			%(extra)s
+			
+			<h2>Kalender</h2>
+			<a href="%(iCalUrl)s">Legg til i kalender (iCal)</a><br />
+			<a href="%(googleCalUrl)s">Legg til i Google Calendar</a>
+			
+		</div>
+	';
+}
 
-						<?php echo dew_fullevent_shortcode_handler (array('event_id' => $event_id, 'no_title' => true)) ?>
+// if(isset($dew_archive));
+if($event_id > 0) {
+	echo dew_fullevent_shortcode_handler($atts = array('event_id'=>$event_id,'template'=>dew_template_single_event()));
+}
+elseif($festival_id > 0) {
+	echo dew_fullfestival_shortcode_handler($atts = array('festival_id'=>$festival_id,'template'=>dew_template_festival(), 'agendaTemplate'=>array('eventTemplate'=>dew_template_agenda_event())));//'agendaTemplate'=>array('eventTemplate' =>dew_template_agenda_event(), 'eventDateCollectionTemplate' => dew_template_agenda_eventcollection())));
+}
+elseif(isset($dew_archive)) {
+	echo 
+	$dew_archive .
+	'<h1 class="entry-title">' . $title . '</h1>' .
+	dew_agenda_menu_shortcode_handler() .
+	'<div id="left_content" style="clear:left">' . 
+	'<ul>' .
+	dew_agenda_shortcode_handler ($atts = array('start_date' => $dew_archive . '-01','end_date' => $dew_archive . '-31','dayspan'=>14,'exclude_menu'=>1, 'exclude_meta'=>1, 'eventTemplate' =>dew_template_agenda_event(), 'eventDateCollectionTemplate' => dew_template_agenda_eventcollection())) . 
+	'</ul>' .
+	'</div>';
+}
+else {
+	echo 
+	'<h1 class="entry-title">' . $title . '</h1>' .
+	dew_agenda_menu_shortcode_handler() .
+	'<div id="left_content" style="clear:left">' . 
+	'<ul>' .
+	dew_agenda_shortcode_handler ($atts = array('dayspan'=>14,'exclude_menu'=>1, 'exclude_meta'=>1, 'eventTemplate' =>dew_template_agenda_event(), 'eventDateCollectionTemplate' => dew_template_agenda_eventcollection())) . 
+	'</ul>' .
+	'</div>';
+}
+	/*dew_fullevent_shortcode_handler();
+dew_fullfestival_shortcode_handler();
+'template' => 'blabla'
+	 *       'agendaTemplate' => array(
+	 *           'eventTemplate' => 'some template' or function name,
+	 *           'eventDateCollectionTemplate' => 'some template' or function name,
+	 *       ),*/
+?>
+</div>
 
-						</div>
-
-<!-- # end event page -->
-<?php elseif ( $festival_id > 0 ): ?>
-<!-- # festival page -->
-
-						<div class="entry-content">
-
-						<?php echo dew_fullfestival_shortcode_handler (array('festival_id' => $festival_id, 'no_title' => true)) ?>
-
-						</div>
-
-<!-- # end festival page -->
-<?php else: ?>
-<!-- # agenda or ordinary page -->
-
-						<div class="entry-content">
-
-						<?php the_post(); the_content() ?>
-
-						</div>
-
-<!-- #end agenda or ordinary page -->
-<?php endif ?>
-					</div>
-				  </div>
-
-<?php get_sidebar(); ?>
-			</div><!-- #content -->
 <?php get_footer(); ?>
