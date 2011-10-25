@@ -139,7 +139,7 @@ function kvarteret_festival_detailbox ($rawFestival) {
 	<?php if ($festival->hasCoverCharge()): ?>
 	<br />
     <h2><?php _e('Covercharge', 'dak_events_wp') ?></h2>
-	<?php echo $event->getCoverCharge()  ?><br />
+	<?php echo $festival->getCoverCharge()  ?><br />
 	<?php endif ?>
 
 	<br />
