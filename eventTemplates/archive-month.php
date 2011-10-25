@@ -33,14 +33,11 @@ $title = apply_filters('the_title', $dew_title);
 get_header(); ?>
 
 			<div id="content" role="main">
+				<h1 class="entry-title">Program</h1>
 				<?php echo dew_agenda_menu_shortcode_handler() ?>
 				<div id="left_content">
 					<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<?php if ( is_front_page() ): ?>
-						<h2 class="entry-title"><?php echo $title ?></h2>
-					<?php else: ?>
-						<h1 class="entry-title"><?php echo $title ?></h1>
-					<?php endif ?>
+						<h2><?php echo $title ?></h2>
 
 <!-- # agenda or ordinary page -->
 

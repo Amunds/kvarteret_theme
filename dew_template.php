@@ -66,15 +66,14 @@ function kvarteret_event_detailbox ($rawEvent) {
 
     <?php printf(__('%s in %s', 'dak_events_wp') , $event->getCategory(), $event->getLocation()) ?><br />
     <?php echo __('Starts:', 'dak_events_wp') . ' ' . $duration ?><br />
-    <?php echo __('Arranger:', 'dak_events_wp') . ' ' . $event->getArranger() ?><br />
+    <?php echo __('Arranger:', 'dak_events_wp') . ' ' . $event->getArranger() ?>
 
 	<?php if ($event->hasCoverCharge()): ?>
-	<br />
+	
     <h2><?php _e('Covercharge', 'dak_events_wp') ?></h2>
 	<?php echo $event->getCoverCharge()  ?><br />
 	<?php endif ?>
 
-	<br />
 	<h2><?php _e('Calendar', 'dak_events_wp') ?></h2>
 
     <a href="<?php echo $event->getICalUrl() ?>">
@@ -137,14 +136,11 @@ function kvarteret_festival_detailbox ($rawFestival) {
     <?php echo __('Arranger:', 'dak_events_wp') . ' ' . $festival->getArranger() ?>
 
 	<?php if ($festival->hasCoverCharge()): ?>
-	<br />
     <h2><?php _e('Covercharge', 'dak_events_wp') ?></h2>
 	<?php echo $festival->getCoverCharge()  ?><br />
 	<?php endif ?>
 
-	<br />
 	<h2><?php _e('Calendar', 'dak_events_wp') ?></h2>
-
     <a href="<?php echo $festival->getICalUrl() ?>">
       <?php _e('Add to calendar (iCal)', 'dak_events_wp') ?>
     </a><br />

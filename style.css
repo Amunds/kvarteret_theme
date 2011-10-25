@@ -54,10 +54,12 @@ a {
 a:hover {
   text-decoration: none;
 }
+	
 
 h1.entry-title {
   font-size: 2.0em;
   margin: 0;
+  margin-top: 20px;
   margin-bottom: 30px;
   color: #F42E07;
   font-weight: bold;
@@ -101,7 +103,6 @@ h1.article-title {
 	border-bottom-left-radius: 5px;
 }
 .article_feed_icons li {
-	display: inline-block;
 	padding: 5px;
 }
 
@@ -109,6 +110,7 @@ h1.article-title {
 h2 {
   font-size: 1.2em;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 
@@ -562,6 +564,17 @@ span.excerpt p {
 .full {
 	font-size: 14px;
 }
+.kvarteret_event_wrapper span:first-child, .festival_link {
+	margin: 0 !important;
+	padding: 0;
+}
+.kvarteret_event_wrapper p {
+	margin-bottom: 20px;
+}
+.kvarteret_event_wrapper h2 {
+	margin-top: 0px;
+	padding: 0;
+}
 
 #standard_right_menu .festival_link {
 	display: block;
@@ -864,36 +877,7 @@ img.attachment-room-thumbnail {
 		.agenda_menu li:last-child:before {
 			display:none;
 		}
-		.agenda_menu li:after {
-			width: 1px;
-			float:left;
-			height: 26px;
-			content:'';
-			margin-left: -10px;
-			margin-top: 5px;
-			background: -moz-linear-gradient(top, rgba(119,119,119,0) 0%, rgba(119,119,119,1) 50%, rgba(119,119,119,0) 100%); /* FF3.6+ */
-			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(119,119,119,0)), color-stop(50%,rgba(119,119,119,1)), color-stop(100%,rgba(119,119,119,0))); /* Chrome,Safari4+ */
-			background: -webkit-linear-gradient(top, rgba(119,119,119,0) 0%,rgba(119,119,119,1) 50%,rgba(119,119,119,0) 100%); /* Chrome10+,Safari5.1+ */
-			background: -o-linear-gradient(top, rgba(119,119,119,0) 0%,rgba(119,119,119,1) 50%,rgba(119,119,119,0) 100%); /* Opera11.10+ */
-			background: -ms-linear-gradient(top, rgba(119,119,119,0) 0%,rgba(119,119,119,1) 50%,rgba(119,119,119,0) 100%); /* IE10+ */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', endColorstr='#444444',GradientType=0 ); /* IE6-9 */
-			background: linear-gradient(top, rgba(119,119,119,0) 0%,rgba(119,119,119,1) 50%,rgba(119,119,119,0) 100%); /* W3C */
-		}
-		.agenda_menu li:before {
-			width: 1px;
-			float:right;
-			height: 26px;
-			content: '';
-			margin-right: -10px;
-			margin-top: 5px;
-			background: -moz-linear-gradient(top, rgba(68,68,68,0) 0%, rgba(68,68,68,1) 50%, rgba(68,68,68,0) 100%); /* FF3.6+ */
-			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(68,68,68,0)), color-stop(50%,rgba(68,68,68,1)), color-stop(100%,rgba(68,68,68,0))); /* Chrome,Safari4+ */
-			background: -webkit-linear-gradient(top, rgba(68,68,68,0) 0%,rgba(68,68,68,1) 50%,rgba(68,68,68,0) 100%); /* Chrome10+,Safari5.1+ */
-			background: -o-linear-gradient(top, rgba(68,68,68,0) 0%,rgba(68,68,68,1) 50%,rgba(68,68,68,0) 100%); /* Opera11.10+ */
-			background: -ms-linear-gradient(top, rgba(68,68,68,0) 0%,rgba(68,68,68,1) 50%,rgba(68,68,68,0) 100%); /* IE10+ */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00444444', endColorstr='#00444444',GradientType=0 ); /* IE6-9 */
-			background: linear-gradient(top, rgba(68,68,68,0) 0%,rgba(68,68,68,1) 50%,rgba(68,68,68,0) 100%); /* W3C */
-		}
+		
 	.agenda_menu a, .agenda_menu li.active a {
 		color: #fff !important;
 		text-decoration: none !important;
@@ -903,5 +887,8 @@ img.attachment-room-thumbnail {
 	.agenda_menu li.active a{
 		background: url(images/agenda_menu_active_bg.png) no-repeat center bottom;
 	}
+.agenda_day:last-child {
+	border: 0;
+}
 	
 	

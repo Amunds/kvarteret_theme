@@ -11,13 +11,14 @@
 get_header(); ?>
 
 			<div id="content" role="main">
+				<h1 class="entry-title">Program</h1>
 				<?php echo dew_agenda_menu_shortcode_handler() ?>
 				<div id="left_content">
 					<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<?php if ( is_front_page() ): ?>
 						<h2 class="entry-title"><?php echo the_title(); ?></h2>
 					<?php else: ?>
-						<h1 class="entry-title"><?php echo the_title(); ?></h1>
+						<!--<h1 class="entry-title"><?php echo the_title(); ?></h1>-->
 					<?php endif ?>
 
 <!-- # agenda or ordinary page -->
