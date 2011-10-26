@@ -63,7 +63,7 @@ get_header(); ?>
 					<ul class="xoxo">
 						<?php if ( !empty($rawEvent) ): ?>
 						<li>
-							<?php do_action('kvarteret_event_detailbox', $rawEvent) ?>
+							<?php do_action('kvarteret_event_detailbox', $rawEvent, $client) ?>
 						</li>
 						<?php endif ?>
 						<?php // dynamic_sidebar( 'primary-widget-area' ) ?>
