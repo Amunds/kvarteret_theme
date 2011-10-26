@@ -7,7 +7,7 @@ remove_all_actions('dew_render_fullfestival');
 add_action('dew_render_fullfestival', 'kvarteret_fullFestival', 10, 2);
 
 //remove_all_actions('kvarteret_event_detailbox');
-add_action('kvarteret_event_detailbox', 'kvarteret_event_detailbox', 10, 1);
+add_action('kvarteret_event_detailbox', 'kvarteret_event_detailbox', 10, 2);
 add_action('kvarteret_festival_detailbox', 'kvarteret_festival_detailbox', 10, 1);
 
 	function kvarteret_fullEvent($rawEvent, array $config = array()) {
@@ -46,7 +46,7 @@ add_action('kvarteret_festival_detailbox', 'kvarteret_festival_detailbox', 10, 1
 
 	}
 
-function kvarteret_event_detailbox ($rawEvent) {
+function kvarteret_event_detailbox ($rawEvent, eventsCalendarClient $client = null) {
 	$event = new DEW_event($rawEvent);
 
 	$startTime = date('H:i', $event->getStartTimestamp());
@@ -54,9 +54,19 @@ function kvarteret_event_detailbox ($rawEvent) {
 	$duration = $event->getFormattedDuration();
 
 	$googleCalUrl = DEW_tools::createGoogleCalUrl($rawEvent);
+
+	$arranger = null;
+
+	if (!is_null($client)) {
+		$arranger = $client->arranger($rawEvent->arranger_id)->data[0];
+	}
 	?>
 
 <div class="kvarteret_event_wrapper">
+
+	<?php if (isset($arranger->logo->id)): ?>
+	<img src="<?php echo DEW_tools::getPictureUrl($arranger->logo, 200, 300) ?>" alt="<?php echo $arranger->logo->description ?>" class="arranger_logo" />
+	<?php endif ?>
 
 	<?php if ($event->hasFestival()): ?>
     <span><?php _e('Part of festival', 'dak_events_wp') ?></span>
