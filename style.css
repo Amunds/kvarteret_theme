@@ -59,10 +59,10 @@ a:hover {
 h1.entry-title {
   font-size: 2.0em;
   margin: 0;
-  margin-top: 20px;
   margin-bottom: 30px;
   color: #F42E07;
   font-weight: bold;
+  line-height: 1;
 }
 
 .attachment-full-thumbnail .wp-post-image {
@@ -534,7 +534,7 @@ span.excerpt p {
   float: right;
   overflow: hidden;
   color: #666;
-  font-size: 15px;;
+  font-size: 14px;
   line-height: 2.0;
 }
 #standard_right_menu ul {
