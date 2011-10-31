@@ -87,8 +87,6 @@
 
 		<?php comments_template( '', true ); ?>
 
-	<?php endif; // This was the if statement that broke the loop into three parts based on categories. ?>
-
 <?php endwhile; // End the loop. Whew. ?>
 
 <?php /* Display navigation to next/previous pages when applicable */ ?>
