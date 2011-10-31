@@ -555,6 +555,9 @@ span.excerpt p {
 	#standard_right_menu h2:first-child {
 		margin-top:0;
 	}
+	.home .widget-title {
+		display: none;
+	}
 
 .ingress {
 	font-size: 1.1em;
