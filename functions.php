@@ -38,6 +38,8 @@
  * @since Kvarteret 1.0
  */
 
+require_once('dew_template.php');
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
