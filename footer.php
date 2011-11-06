@@ -47,8 +47,15 @@
 		</div>
 		
 		<div id="sub_footer">
-			Siden er utviklet av Webgruppen ved Det Akademiske Kvarter. For tekniske spørsmål kontakt <a href="mailto:webgruppen@kvarteret.no">webgruppen@kvarteret.no</a><br />
-			Det Akademiske Kvarter ble åpnet av Kronprins Haakon i 1995 og er studentenes kulturhus i Bergen. Huset er drevet på dugnad av og for studenter men er åpent for alle. En rekke organisasjoner, inkludert organisasjoner nominert til ildsjelprisen 2007, låner lokaler og teknisk utstyr på Kvarteret gratis til sine arrangementer. Kvarteret har omtrent 2000 arrangementer årlig, og en omsetning på rundt 14 millioner. Med opptil 10 000 besøkende hver uke er det et yrende liv nesten hele døgnet.
+			Siden er utviklet av Webgruppen ved Det Akademiske Kvarter. 
+			For tekniske spørsmål kontakt <a href="mailto:webgruppen@kvarteret.no">webgruppen@kvarteret.no</a>.<br />
+			Det Akademiske Kvarter ble åpnet av Kronprins Haakon i 1995 
+			og er studentenes kulturhus i Bergen. Huset er drevet på dugnad 
+			av og for studenter men er åpent for alle. En rekke 
+			organisasjoner låner lokaler og teknisk utstyr på Kvarteret 
+			gratis til sine arrangementer. Kvarteret har årlig over 1000 
+			arrangementer, og omsetning på rundt 13 millioner. Med opptil
+			250 000 besøkende årlig er det et yrende liv nesten hele døgnet.
 		</div>
 		
 		<?php
