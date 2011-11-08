@@ -60,9 +60,9 @@
 	<body <?php body_class(); ?>>
 		<div id="header">
 			<ul id="header_opening_times">
-				<li><strong>Mon-fre</strong> 11.30 - 01.00</li>
+				<li><strong>Man-ons</strong> 11:30 - 01:00</li>
 				<li><strong>Tor-lør</strong> 11:30 - 03:00</li>
-				<li><strong>Søn</strong> åpen ved fotball/behov</li>
+				<li><strong>Søn</strong> se tider for fotballkamp</li>
 			</ul>
 		
 			<div id="header_follow_buttons">

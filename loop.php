@@ -68,7 +68,7 @@
 			</div><!-- .entry-summary -->
 		<?php else : ?>
 			<div class="entry-content">
-				<?php the_content( __( 'Les mer', 'twentyten' ) ); ?>
+				<?php the_content( __( '&nbsp;', 'twentyten' ) ); ?>
 				<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentyten' ), 'after' => '</div>' ) ); ?>
 			</div><!-- .entry-content -->
 		<?php endif; ?>
