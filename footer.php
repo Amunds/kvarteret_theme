@@ -12,9 +12,9 @@
 ?>
 		</div><!-- #main -->
 
-		<div id="footer" role="contentinfo">
-			<div id="footer_content">
-				<div class="opening_hours_container">
+		<div id="footer" role="contentinfo" class="cf">
+			<div id="footer_content" class="cf">
+				<div class="opening_hours_container cf">
 					<span class="opening_title">
 						Grøndahl Flygel- og pianolager (pub 1. etg)
 					</span>
@@ -24,7 +24,7 @@
 						Søn åpen ved fotball/behov
 					</span>
 				</div>
-				<div class="opening_hours_container">
+				<div class="opening_hours_container cf">
 					<span class="opening_title">
 						Stjernesalen (kafè 2. etg)
 					</span>
@@ -43,11 +43,12 @@
 						Fre-Lør 19:00-03:00
 					</span>
 				</div>
+				<br style="clear:both;display:block;height:0;" />
 			</div>
 		</div>
 		
 		<div id="sub_footer">
-			Siden er utviklet av Webgruppen ved Det Akademiske Kvarters. For tekniske spørsmål kontakt <a href="mailto:webgruppen@kvarteret.no">webgruppen@kvarteret.no</a>. Det Akademiske Kvarter ble åpnet av Kronprins Haakon i 1995 og er studentenes kulturhus i Bergen. Huset er drevet på dugnad av og for studenter men er åpent for alle. En rekke organisasjoner låner lokaler og teknisk utstyr på Kvarteret gratis til sine arrangementer. Kvarteret har årlig over 1000 arrangementer, og omsetning på rundt 13 millioner. Med opptil 250 000 besøkende hvert år er det et yrende liv nesten hele døgnet.”
+			Siden er utviklet av Webgruppen ved Det Akademiske Kvarters. For tekniske spørsmål kontakt <a href="mailto:webgruppen@kvarteret.no">webgruppen@kvarteret.no</a>. Det Akademiske Kvarter ble åpnet av Kronprins Haakon i 1995 og er studentenes kulturhus i Bergen. Huset er drevet på dugnad av og for studenter men er åpent for alle. En rekke organisasjoner låner lokaler og teknisk utstyr på Kvarteret gratis til sine arrangementer. Kvarteret har årlig over 1000 arrangementer, og omsetning på rundt 13 millioner. Med opptil 250 000 besøkende hvert år er det et yrende liv nesten hele døgnet.
 		</div>
 		
 		<?php

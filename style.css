@@ -54,6 +54,23 @@ a {
 a:hover {
   text-decoration: none;
 }
+
+/* clearfix */
+/* For modern browsers */
+.cf:before,
+.cf:after {
+	content:"";
+	display:table;
+}
+
+.cf:after {
+	clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+	zoom:1;
+}
 	
 
 h1.entry-title {
@@ -490,7 +507,6 @@ a:hover.current_news_title {
 
 
 #footer {
-  height: 130px;
   background-color: #fff;
   margin-left: 12px;
   margin-right: 12px;
@@ -501,21 +517,31 @@ a:hover.current_news_title {
   border-bottom-right-radius: 8px;
 }
 
-#footer_content {
-  width: 100%;
-  height: 130px;
-  background-image: url('images/footer_background.png');
-  background-repeat: repeat-x;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-#footer_content .opening_hours_container:last-child {
-	height: 78%;
-	background: url('images/small_penguins_transparent.png') bottom right no-repeat;
-}
+	#footer_content {
+		width: 100%;
+		padding-bottom: 0px;
+		background: rgb(66,66,66); /* Old browsers */
+		background: -moz-linear-gradient(top, rgba(66,66,66,1) 0%, rgba(21,21,21,1) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(66,66,66,1)), color-stop(100%,rgba(21,21,21,1))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, rgba(66,66,66,1) 0%,rgba(21,21,21,1) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, rgba(66,66,66,1) 0%,rgba(21,21,21,1) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, rgba(66,66,66,1) 0%,rgba(21,21,21,1) 100%); /* IE10+ */
+		background: linear-gradient(top, rgba(66,66,66,1) 0%,rgba(21,21,21,1) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424242', endColorstr='#151515',GradientType=0 ); /* IE6-9 */
+		border-radius: 5px;
+		font-size: 14px;
+		position: relative;
+	}
+		#footer_content:after {
+			position: absolute;
+			width: 70px;
+			height: 56px;
+			background: url('images/small_penguins_transparent.png') bottom right no-repeat;
+			bottom: 0;
+			right: 20px;
+			content: ' ';
+			z-index: 10;
+		}
 
 #sub_footer {
   font-size: 12px;
@@ -524,14 +550,13 @@ a:hover.current_news_title {
   padding-top: 20px;
   color: #555;
 }
+	#sub_footer a {
+	  color: #333;
+	}
 
-#sub_footer a {
-  color: #333;
-}
-
-#sub_footer a:hover {
-  color: #ddd;
-}
+	#sub_footer a:hover {
+	  color: #ddd;
+	}
 
 #standard_right_menu {
   width: 320px;
