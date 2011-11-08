@@ -10,6 +10,9 @@ add_action('dew_render_fullfestival', 'kvarteret_fullFestival', 10, 2);
 add_action('kvarteret_event_detailbox', 'kvarteret_event_detailbox', 10, 2);
 add_action('kvarteret_festival_detailbox', 'kvarteret_festival_detailbox', 10, 1);
 
+remove_all_actions('dew_render_widget_list');
+add_action('dew_render_widget_list', 'kvarteret_widgetList', 10, 2);
+
 	function kvarteret_fullEvent($rawEvent, array $config = array()) {
 		// All named arguments are required in the format
 
@@ -161,4 +164,38 @@ function kvarteret_festival_detailbox ($rawFestival) {
 </div>
 
 	<?php
+}
+
+function kvarteret_widgetList ($dateSortedEvents, $config) {
+		?>
+<ul class="dew_eventList" id="<?php echo $config['id_base'] ?>-dak-events-wp-list">
+
+<?php
+
+		foreach ($dateSortedEvents as $timestamp => $rawEvents) {
+			$dayName = ucfirst(date_i18n('l', $timestamp ));
+
+			if (date('Ymd', $timestamp) == date('Ymd')) {
+				echo '<li class="dew_eventList_date">I dag</li>' . "\n";
+			} else if (date('Ymd', $timestamp) == date('Ymd', time() + 86400)) {
+				echo '<li class="dew_eventList_date">I morgen</li>' . "\n";
+			} else {
+				$date = date($config['dateFormat'], $timestamp);
+
+				echo '<li class="dew_eventList_date">' . $dayName . ' ' . $date . '</li>' . "\n";
+			}
+
+			foreach ($rawEvents as $rawEvent) {
+				echo '<li class="dew_event" id="' . $config['id_base'] . '-dak-events-wp-list-' . $rawEvent->id . '">';
+
+				do_action('dew_render_widget_event', $rawEvent);
+
+				echo'</li>' . "\n";
+			}
+		}
+
+?>
+
+</ul>
+		<?php
 }

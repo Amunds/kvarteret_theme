@@ -8,7 +8,7 @@
  * @since Kvarteret 1.0
  */
 
-require_once('dew_template.php');
+//require_once('dew_template.php');
 
 // if this is a full event, attach wp_title filter
 $event_id = 0;
