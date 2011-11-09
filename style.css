@@ -498,7 +498,7 @@ div.current_news_image img {
 	.current_news {
 		font-size: 13px;
 		line-height: 1.3;
-		background: #3F3F3F;
+		background: #333;
 		height: 290px;
 		border-bottom-left-radius: 5px;
 		border-bottom-right-radius: 5px;
