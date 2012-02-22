@@ -69,7 +69,7 @@
 			<div id="header_follow_buttons">
 				<a href="http://twitter.com/Kvarteret"><img src="<?php bloginfo('template_directory'); ?>/images/twitter.png" alt="Twitter" /></a>
 				<a href="http://www.facebook.com/pages/Det-Akademiske-Kvarter/20210537496"><img src="<?php bloginfo('template_directory'); ?>/images/facebook.png" alt="Facebook" /></a> 
-				<a href="https://intern.kvarteret.no/events/api/atom/upcomingEvents"><img src="<?php bloginfo('template_directory'); ?>/images/rss.png" alt="Upcoming events" /></a> 
+				<a href="http://events.kvarteret.no/api/atom/upcomingEvents"><img src="<?php bloginfo('template_directory'); ?>/images/rss.png" alt="Upcoming events" /></a> 
 			</div>
 		
 			<div id="header_search_form">
