@@ -26,9 +26,25 @@ if ( ! in_array('dak_events_wp/dak_events_wp.php', get_option('active_plugins'))
 	$dew_options = DEW_Management::getOptions();
 	$client = new eventsCalendarClient ($dew_options['eventServerUrl'], null, $dew_options['cache'], $dew_options['cacheTime']);
 
-$festivalSearch = $client->festivalList(array('titleContains' => 'helhus', 'limit' => 1));
+$festivalSearch = $client->festivalList(array('titleContains' => 'helhus', 'limit' => 10));
 
-if (!empty($festivalSearch->data[0]->id)) {
-	$wp_query->set('festival_id', $festivalSearch->data[0]->id);
-	include(TEMPLATEPATH . '/eventTemplates/festival.php');
+if (!empty($festivalSearch->data)) {
+	$no_template_header = true;
+	
+	get_header();
+
+	echo "<ul class='agenda_menu'>";
+	foreach ($festivalSearch->data as $f) {
+		echo "<li><a href='#post-" . get_the_ID() . "-" . $f->id . "'>" . $f->title . "</a></li>";
+	}
+	echo "</ul>";
+
+	foreach ($festivalSearch->data as $f) {
+		$wp_query->set('festival_id', $f->id);
+		echo '<div class="content_row cf">' . "\n";
+		include(TEMPLATEPATH . '/eventTemplates/festival.php');
+		echo '</div><!-- end .content_row -->' . "\n";
+	}
+	
+	get_footer();
 }

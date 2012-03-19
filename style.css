@@ -440,10 +440,16 @@ div.menu-header ul li.current_page_item a:hover {
 	background-position: center bottom;
 }
 
+.content,
 #content {
   overflow: hidden;
 }
 
+.content_row {
+  margin-bottom: 40px;
+}
+
+div.left_content,
 div#left_content {
   width: 600px;
   color: #333;
@@ -567,6 +573,7 @@ a:hover.current_news_title {
 	  color: #ddd;
 	}
 
+.standard_right_menu,
 #standard_right_menu {
   width: 320px;
   float: right;

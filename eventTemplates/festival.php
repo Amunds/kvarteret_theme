@@ -21,23 +21,30 @@ if ($festival_id > 0) {
 
 	$arr = $client->festival($festival_id);
 	$rawFestival = $arr->data[0];
-
-	add_filter('wp_title', 'dew_arrangement_template_wp_title', 5, 3);
 }
 
+
 if ($festival_id > 0) {
+	if (empty($no_template_header) || !$no_template_header) {
+		add_filter('wp_title', 'dew_arrangement_template_wp_title', 5, 3);
+	}
 	$dew_title = $rawFestival->title;
 	$title = apply_filters('the_title', $dew_title);
 } else {
 	$title = the_title('', '', false);
 }
 
-get_header(); ?>
-
+if (empty($no_template_header) || !$no_template_header) {
+	get_header();
+?>
 			<div id="content" role="main">
+<?php
+}
+?>
+
 				<?php //echo dew_agenda_menu_shortcode_handler() ?>
-				<div id="left_content">
-					<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<div class="left_content">
+					<div id="post-<?php the_ID(); ?>-<?php echo $festival_id ?>" <?php post_class(); ?>>
 					<?php if ( is_front_page() ) { ?>
 						<h2 class="entry-title"><?php echo $title; ?></h2>
 					<?php } else { ?>
@@ -59,7 +66,7 @@ get_header(); ?>
 					</div><!-- end #post-<?php echo the_ID() ?> -->
 				</div><!-- end #left_content -->
 
-				<div id="standard_right_menu" class="widget-area" role="complementary">
+				<div class="standard_right_menu widget-area" role="complementary">
 					<ul class="xoxo">
 						<?php if ( !empty($rawFestival) ): ?>
 						<li>
@@ -69,5 +76,10 @@ get_header(); ?>
 						<?php // dynamic_sidebar( 'primary-widget-area' ) ?>
 					</ul>
 				</div>
+				
+<?php if (empty($no_template_header) || !$no_template_header) { ?>
 			</div><!-- #content -->
-<?php get_footer(); ?>
+<?php 
+get_footer(); 
+}
+?>
