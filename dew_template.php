@@ -8,7 +8,7 @@ add_action('dew_render_fullfestival', 'kvarteret_fullFestival', 10, 2);
 
 //remove_all_actions('kvarteret_event_detailbox');
 add_action('kvarteret_event_detailbox', 'kvarteret_event_detailbox', 10, 2);
-add_action('kvarteret_festival_detailbox', 'kvarteret_festival_detailbox', 10, 1);
+add_action('kvarteret_festival_detailbox', 'kvarteret_festival_detailbox', 10, 2);
 
 remove_all_actions('dew_render_widget_list');
 add_action('dew_render_widget_list', 'kvarteret_widgetList', 10, 2);
@@ -132,7 +132,7 @@ function kvarteret_fullFestival($rawFestival, $dateSortedEvents, array $config =
 		<?php
 	}
 
-function kvarteret_festival_detailbox ($rawFestival) {
+function kvarteret_festival_detailbox ($rawFestival, $options = array()) {
 	$festival = new DEW_festival($rawFestival);
 
 	$startTime = date('H:i', $festival->getStartTimestamp());
@@ -144,6 +144,7 @@ function kvarteret_festival_detailbox ($rawFestival) {
 
 <div class="kvarteret_festival_wrapper">
 
+    <h2><?php _e('Details', 'dak_events_wp') ?></h2>
     <?php echo __('Where:', 'dak_events_wp') . ' ' . $festival->getLocation() ?><br />
     <?php echo __('Starts:', 'dak_events_wp') . ' ' . $duration ?><br />
     <?php echo __('Arranger:', 'dak_events_wp') . ' ' . $festival->getArranger() ?>
