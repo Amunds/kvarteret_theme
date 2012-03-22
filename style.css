@@ -630,6 +630,11 @@ a:hover.current_news_title {
 	margin-bottom: 0;
 }
 
+.kvarteret_festival_wrapper h2:first-child {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
 #standard_right_menu .festival_link {
 	display: block;
 	background: #F52F08;
