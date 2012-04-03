@@ -87,6 +87,11 @@ function kvarteret_event_detailbox ($rawEvent, eventsCalendarClient $client = nu
 	<?php echo $event->getCoverCharge()  ?><br />
 	<?php endif ?>
 
+	<?php if ($event->hasAgeLimit()): ?>
+	<h2><?php _e('Age limit', 'dak_events_wp') ?></h2>
+	<?php echo $event->getAgeLimit()  ?><br />
+	<?php endif ?>
+
 	<h2><?php _e('Calendar', 'dak_events_wp') ?></h2>
 
     <a href="<?php echo $event->getICalUrl() ?>">
