@@ -421,6 +421,17 @@ function twentyten_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
+
+	// Custom sidebar for Sommerkvarteret
+	register_sidebar( array(
+		'name' => __( 'Sommerkvarteret Widget Area', 'twentyten' ),
+		'id' => 'sommerkvarteret-widget-area',
+		'description' => __( 'Sommerkvarteret widget area', 'twentyten' ),
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
 }
 /** Register sidebars by running twentyten_widgets_init() on the widgets_init hook. */
 add_action( 'widgets_init', 'twentyten_widgets_init' );
