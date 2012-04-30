@@ -58,7 +58,12 @@ add_filter('excerpt_length', 'custom_excerpt_length');
      
 
     <div id="standard_right_menu" class="widget-area" role="complementary">
-      <?php dynamic_sidebar( 'sommerkvarteret-widget-area' );  ?>
+      <ul class="xoxo">
+        <li>
+          <img alt="sommerkvarteret_logo" src="<?php bloginfo('template_directory'); ?>/images/sommerkvarteret_logo.jpg" style="max-width: 100%;"/>
+        </li>
+        <?php dynamic_sidebar( 'sommerkvarteret-widget-area' );  ?>
+      </ul>
     </div><!-- #sommerkvarteret .widget-area -->
 
   </div><!-- #content -->
