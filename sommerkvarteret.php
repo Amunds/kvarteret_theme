@@ -22,6 +22,7 @@ add_filter('excerpt_length', 'custom_excerpt_length');
   <div id="content" role="main">
     <div id="left_content">
 	  <div></div>
+
       <?php
         global $post;
         $current_news = get_posts('numberposts=10&category_name=sk');
