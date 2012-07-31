@@ -975,5 +975,58 @@ img.attachment-room-thumbnail {
 .agenda_day:last-child {
 	border: 0;
 }
+
+.btn {
+	text-decoration: none;
+	height: 20px;
+	line-height: 20px;
+	display: inline-block;
+	color: #ffffff;
+	padding: 10px 20px;
+	margin-bottom: 20px;
+	background: #e51a0f;
+	background: -moz-linear-gradient(
+		top,
+		#e51a0f 0%,
+		#a8130b);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#e51a0f),
+		to(#a8130b));
+	background: linear-gradient(
+		top,
+		#e51a0f 0%,
+		#a8130b);
+	border-radius: 5px;
+	border: 0px solid #ffffff;
+	-moz-box-shadow:
+		0px 3px 11px rgba(000,000,000,0.3),
+		inset 0px 0px 0px rgba(255,000,217,1);
+	-webkit-box-shadow:
+		0px 3px 11px rgba(000,000,000,0.3),
+		inset 0px 0px 0px rgba(255,000,217,1);
+	box-shadow:
+		0px 3px 11px rgba(000,000,000,0.3),
+		inset 0px 0px 0px rgba(255,000,217,1);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.2),
+		0px 1px 0px rgba(255,255,255,0.3);
+}
+
+.btn:hover {
+	background: #F46760;
+	background: -moz-linear-gradient(
+		top,
+		#F46760 0%,
+		#a8130b);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#F46760),
+		to(#a8130b));
+	background: linear-gradient(
+		top,
+		#F46760 0%,
+		#a8130b);
+}
 	
 	
