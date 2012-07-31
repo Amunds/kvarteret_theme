@@ -979,24 +979,25 @@ img.attachment-room-thumbnail {
 .btn {
 	text-decoration: none;
 	height: 20px;
+	text-align:center;
 	line-height: 20px;
 	display: inline-block;
 	color: #ffffff;
 	padding: 10px 20px;
 	margin-bottom: 20px;
-	background: #e51a0f;
+	background: #333;
 	background: -moz-linear-gradient(
 		top,
-		#e51a0f 0%,
-		#a8130b);
+		#606060 0%,
+		#333);
 	background: -webkit-gradient(
 		linear, left top, left bottom, 
-		from(#e51a0f),
-		to(#a8130b));
+		from(#606060),
+		to(#333));
 	background: linear-gradient(
 		top,
-		#e51a0f 0%,
-		#a8130b);
+		#606060 0%,
+		#333);
 	border-radius: 5px;
 	border: 0px solid #ffffff;
 	-moz-box-shadow:
@@ -1014,19 +1015,19 @@ img.attachment-room-thumbnail {
 }
 
 .btn:hover {
-	background: #F46760;
+	background: #888888;
 	background: -moz-linear-gradient(
 		top,
-		#F46760 0%,
-		#a8130b);
+		#888888 0%,
+		#333);
 	background: -webkit-gradient(
 		linear, left top, left bottom, 
-		from(#F46760),
-		to(#a8130b));
+		from(#888888),
+		to(#333));
 	background: linear-gradient(
 		top,
-		#F46760 0%,
-		#a8130b);
+		#888888 0%,
+		#333);
 }
 	
 	
