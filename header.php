@@ -13,6 +13,7 @@
 		<meta charset="utf-8">
 		<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
 		<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/favicon.ico">
+		<link rel="publisher" href="https://plus.google.com/117774314238786301866" />
 		<title><?php
 		/*
 		 * Print the <title> tag based on what is being viewed.
