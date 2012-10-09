@@ -30,17 +30,9 @@
 					</span>
 					<span class="opening_hours">
 						Man-ons 11:30-23:00<br />
-						Tors 11:30-03:00<br />
+						Tors 11:30-01:00<br />
 						Fre 11:30-03:00<br />
-						Lør 15:00-03:00
-					</span>
-				</div>
-				<div class="opening_hours_container">
-					<span class="opening_title">
-						Halvtimen (bar 3. etg)
-					</span>
-					<span class="opening_hours">
-						Fre-Lør 19:00-03:00
+						Lør 14:00-03:00
 					</span>
 				</div>
 				<br style="clear:both;display:block;height:0;" />
