@@ -19,6 +19,7 @@
 						Grøndahl Flygel- og pianolager (pub 1. etg)
 					</span>
 					<span class="opening_hours">
+						Man 17:00-01:00<br />
 						Man-ons 20:00-01:00<br />
 						Tors-Lør 19:00-03:00<br />
 						Søn åpen ved fotball/behov
