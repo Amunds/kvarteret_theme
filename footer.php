@@ -20,8 +20,8 @@
 					</span>
 					<span class="opening_hours">
 						Man 17:00-01:00<br />
-						Man-ons 20:00-01:00<br />
-						Tors-Lør 19:00-03:00<br />
+						Tirs-ons 20:00-01:00<br />
+						Tors-lør 19:00-03:00<br />
 						Søn åpen ved fotball/behov
 					</span>
 				</div>
@@ -33,7 +33,16 @@
 						Man-ons 11:30-23:00<br />
 						Tors 11:30-01:00<br />
 						Fre 11:30-03:00<br />
-						Lør 14:00-03:00
+						Lør 14:00-03:30
+					</span>
+				</div>
+				<div class="opening_hours_container cf">
+					<span class="opening_title">
+						Matservering Stjernesalen
+					</span>
+					<span class="opening_hours">
+						Man-fre: Lunch 11:30-15:00, middag 15:00-21:00<br />
+						Lør: Brunch 14:00-17:00
 					</span>
 				</div>
 				<br style="clear:both;display:block;height:0;" />
