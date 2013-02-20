@@ -21,7 +21,7 @@
 					<span class="opening_hours">
 						Man 17:00-01:00<br />
 						Tirs-ons 20:00-01:00<br />
-						Tors-lør 19:00-03:00<br />
+						Tors-lør 19:00-03:30<br />
 						Søn åpen ved fotball/behov
 					</span>
 				</div>
@@ -32,7 +32,7 @@
 					<span class="opening_hours">
 						Man-ons 11:30-23:00<br />
 						Tors 11:30-01:00<br />
-						Fre 11:30-03:00<br />
+						Fre 11:30-03:30<br />
 						Lør 14:00-03:30
 					</span>
 				</div>
