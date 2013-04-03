@@ -64,7 +64,7 @@
 				<li><strong>Man-ons</strong> 11:30 - 01:00</li>
 				<li><strong>Tor-fre</strong> 11:30 - 03:30</li>
 				<li><strong>Lør</strong> 14:00 - 03:30</li>
-				<li><strong>Søn</strong> Se tider for fotballkamp</li>
+				<li><strong>Søn</strong> Åpent ved arrangement</li>
 			</ul>
 		
 			<div id="header_follow_buttons">
