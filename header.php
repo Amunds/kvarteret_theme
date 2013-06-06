@@ -97,5 +97,11 @@
 				</span>
 			</div>
 		</div>
-		
+
 		<div id="main">
+			<div style="background-color: rgb(66,66,66); color: #fff; 
+			margin-bottom: 15px; padding: 15px; border: solid 1px rgb(66,66,66); border-radius: 5px;">
+				<p style="font-size: 16px">Kvarterets frivillige har tatt sommerferie, men 
+				<a style="color: #fff; font-size: 20px" href="http://sommerkvarteret.no">sommerkvarteret</a> holder åpent.</p></div>
+
+
